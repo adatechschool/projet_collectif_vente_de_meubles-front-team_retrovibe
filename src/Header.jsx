@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from './logo-retrovibe.png';
 import loupe from './Loupe.png';
+import BtnCart from './BtnCart';
 
 function Header() {
     return(
@@ -12,14 +13,13 @@ function Header() {
            
             <div class='flex flex-row items-center my-8 border-2 border-violet-400 hover:border-violet-700 focus:outline-none rounded-full px-1  '>
                 <form>
-                    <input type = "search" placeholder=" rechercher" class = "w-28" ></input>
-                    <input type="image" /* onclick=" " */ src={loupe} class = "w-5 h-5 bg-violet-400 rounded-full hover:bg-violet-700 focus:outline-none"/>
-                </form>
+                    <input type = "search" placeholder= " rechercher" class = "w-50 focus:outline-none" ></input>
+                    <button type='submit' class= "w-8 h-8 bg-violet-400 rounded-full hover:bg-violet-700 focus:outline-none">🔍</button>                </form>
             </div>
            
-            <div class='flex flex-row items-center mt-4'>
+            <div class='flex flex-row items-center mt-4 gap-4'>
                 <button type="submit" class="mb-6 text-white bg-violet-400 hover:bg-violet-700 focus:outline-none font-medium rounded-lg text-sm sm:w-auto px-5 py-2.5 text-center">Mon Compte</button>
-                <input type = "button"></input>
+                <BtnCart/>
             </div>
         </div>
     )

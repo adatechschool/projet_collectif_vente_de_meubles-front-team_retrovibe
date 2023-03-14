@@ -8,7 +8,12 @@ function App() {
     <Header/> 
     <div className="App">       
       <div className='App-main'>
-      <Connexion/> 
+        <Connexion/> 
+        <Connexion/> 
+        <Connexion/> 
+        <Connexion/> 
+        <Connexion/> 
+        <Connexion/> 
       </div>
     </div>
     </>
