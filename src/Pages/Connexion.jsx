@@ -1,3 +1,5 @@
+/* page 4 de la maquette */
+
 import React from 'react';
 
 function Connexion() {
