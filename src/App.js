@@ -1,14 +1,17 @@
-import logo from './logo.svg';
 import './App.css';
 import Connexion from './Connexion';
+import Header  from './Header';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <Connexion/> 
-      </header>
+    <>
+    <Header/> 
+    <div className="App">       
+      <div className='App-main'>
+      <Connexion/> 
+      </div>
     </div>
+    </>
   );
 }
 
