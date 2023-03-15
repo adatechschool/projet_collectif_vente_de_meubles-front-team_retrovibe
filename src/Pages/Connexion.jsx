@@ -28,10 +28,10 @@ function Connexion() {
         <h1 class="mt-6 mb-6 text-center">Pas encore client.e ?</h1>
             <div class="mb-6 flex flex-row">
               <div class="mr-4">
-                  <input type="nom" id="nom" class="bg-slate-100 border-2 border-violet-400 text-gray-900 text-sm rounded-lg focus:outline-none block p-2.5 hover:border-violet-700" placeholder="nom" required />
+                  <input type="text" id="nom" class="bg-slate-100 border-2 border-violet-400 text-gray-900 text-sm rounded-lg focus:outline-none block p-2.5 hover:border-violet-700" placeholder="nom" required />
               </div>
               <div>
-                  <input type="prénom" id="prénom" class="bg-slate-100 border-2 border-violet-400 text-gray-900 text-sm rounded-lg focus:outline-none block p-2.5 hover:border-violet-700" placeholder="prénom" required />
+                  <input type="text" id="prenom" class="bg-slate-100 border-2 border-violet-400 text-gray-900 text-sm rounded-lg focus:outline-none block p-2.5 hover:border-violet-700" placeholder="prénom" required />
               </div>
             </div>
             <div class="mb-6">
