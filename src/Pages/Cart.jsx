@@ -61,11 +61,6 @@ function Cart() {
                         <p className="font-bold tracking-wide ml-40">100$</p>
                         <p className="font-bold tracking-wide">TTC</p>
                     </div>
-                    <div className="flex justify-between">
-                        <p className="tracking-wide">Article_4</p>
-                        <p className="font-bold tracking-wide ml-40">100$</p>
-                        <p className="font-bold tracking-wide">TTC</p>
-                    </div>
                     <div class="content-none h-0.5 bg-black inset-y-0 mt-8 mb-8 ml-14 mr-14"/>
                     <div className="flex justify-between">
                         <p className="font-bold tracking-wide">Livraison</p>
@@ -75,7 +70,7 @@ function Cart() {
                     <div class="content-none h-0.5 bg-black inset-y-0 mt-8 mb-8 ml-14 mr-14"/>
                     <div className="flex justify-between">
                         <p className="font-bold tracking-wide">Total</p>
-                        <p className="font-bold tracking-wide ml-48">450$</p>
+                        <p className="font-bold tracking-wide ml-48">350$</p>
                         <p className="font-bold tracking-wide">TTC</p>
                     </div>
                 </div>
