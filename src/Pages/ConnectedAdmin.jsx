@@ -4,17 +4,34 @@ import React from 'react';
 
 function connectedAdmin(){
     return(
-        <div class = "flex flex-row justify-evenly">
-            <div>
-                 <p>Coté gestion article</p>
+        <div class="w-full pl-60 pr-60">
+        <div class = "grid grid-cols-3 gap-4 justify-self-center">
+            <div class = "mt-20 col-span-2" >
+                 <h2>Espace administration</h2>
+                 <div class = "mt-10 p-1 text-center grid grid-cols-4 gap-1 shadow-md text-violet-700">
+                    <p>Nom article</p>
+                    <p>Prix</p>
+                    <p>Statut</p>
+                    <p>Action</p>
+                 </div>
+                 <div class = "mt-1 p-1 text-center grid grid-cols-4 gap-1 shadow-md">
+                    <p>Chaise d'écolier</p>
+                    <p>35</p>
+                    <p>En ligne</p>
+                    <div class="flex flex-row justify-evenly " >
+                        <button type='submit' class= "w-8 h-8 bg-violet-400 rounded-full hover:bg-violet-700 focus:outline-none">📝</button>  
+                        <button type='submit' class= "w-8 h-8 bg-violet-400 rounded-full hover:bg-violet-700 focus:outline-none">❌</button>  
+                    </div>
+                 </div>
+
             </div>
-            <div class="m-10 flex flex-col shadow-md justify-center">
-                <h1 class=" mb-6 text-center">Ajouter un article</h1>
+            <div class="mt-20 flex flex-col shadow-md justify-center">
+                <h2 class=" mb-6 text-center">Ajouter un article</h2>
                 <form class = "ml-6">
                     <div class="m-4 ">
                         <input  placeholder="nom" required type="text" id="nomArticle" class="w-full bg-slate-100 border-2 border-violet-400 text-gray-900 text-sm rounded-lg focus:outline-none block p-2.5 hover:border-violet-700" />
                     </div>
-                    <div class="m-4 flex flex-row">
+                    <div class="m-4 grid grid-cols-3 gap-1">
                         <input type="text" id="longueur" placeholder="longueur" required class="mr-1 bg-slate-100 border-2 border-violet-400 text-gray-900 text-sm rounded-lg focus:outline-none block p-2.5 hover:border-violet-700"  />
                         <input type="text" id="largeur" placeholder="largeur" required class="mr-1 bg-slate-100 border-2 border-violet-400 text-gray-900 text-sm rounded-lg focus:outline-none block p-2.5 hover:border-violet-700"  />
                         <input type="text" id="hauteur" placeholder="hauteur" required class="bg-slate-100 border-2 border-violet-400 text-gray-900 text-sm rounded-lg focus:outline-none block p-2.5 hover:border-violet-700" />
@@ -52,10 +69,11 @@ function connectedAdmin(){
                         </div>
                     </div>
                     <div class="w-full flex justify-center">
-                        <button type="submit" class=" mb-6 text-white bg-violet-400 hover:bg-violet-700 focus:outline-none font-medium rounded-lg text-sm sm:w-auto px-5 py-2.5 text-center">Ajouter article</button>
+                        <button type="submit" class=" shadow-md mb-6 text-white bg-violet-400 hover:bg-violet-700 focus:outline-none font-medium rounded-lg text-sm sm:w-auto px-5 py-2.5 text-center">Ajouter article</button>
                     </div>
                 </form>
             </div>
+        </div>
         </div>
     )
 };
