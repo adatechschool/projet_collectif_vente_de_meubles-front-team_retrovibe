@@ -7,7 +7,7 @@ import Cart from './Pages/Cart';
 import MonCompte from './Pages/MonCompte';
 import ConnectedClient from './Pages/ConnectedClient';
 import ConnectedAdmin from './Pages/ConnectedAdmin';
-
+import Product from './Pages/Product';
 
 function App() {
   return (
@@ -20,6 +20,7 @@ function App() {
       <Route path='/moncompte' element={<MonCompte/>}/>
       <Route path='/connectedclient' element={<ConnectedClient/>}/>
       <Route path='/connectedadmin' element={<ConnectedAdmin/>}/>
+      <Route path='/product' element={<Product/>}/>
     </Routes>
     </>
   );
