@@ -4,7 +4,7 @@ import BtnCart from './BtnCart';
 
 function Header() {
     return(
-        <div class = "bg-white flex flex-row justify-evenly shadow-md sticky w-full top-0 z-0">
+        <div class = "bg-white flex flex-row justify-evenly shadow-md sticky w-full top-0 z-10">
             <div>
                 <a href="/home"class = "flex flex-row items-center">
                 <img src = {logo} class = "w-28" />
