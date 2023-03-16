@@ -8,6 +8,7 @@ import MonCompte from './Pages/MonCompte';
 import ConnectedClient from './Pages/ConnectedClient';
 import ConnectedAdmin from './Pages/ConnectedAdmin';
 import Product from './Pages/Product';
+import Footer  from './Composants/Footer';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
       <Route path='/connectedadmin' element={<ConnectedAdmin/>}/>
       <Route path='/product' element={<Product/>}/>
     </Routes>
+    <Footer/> 
     </>
   );
 }
