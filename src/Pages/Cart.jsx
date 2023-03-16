@@ -17,8 +17,8 @@ function Cart() {
                         <p className="font-bold mb-2">Nom du produit 1</p>
                         <div class = "flex flew-row">
                             <p className="mb-2">Categories du produit 1</p>
-                            <div class = "bg-purple-400">
-                                <img src={Croix} alt="supprimer" className="w-5 h-5 ml-40"/>
+                            <div>
+                                <img src={Croix} alt="supprimer" className="w-5 h-5 ml-64"/>
                             </div>
                         </div>
                         <p class = "font-bold">100€ TTC</p>
@@ -34,7 +34,7 @@ function Cart() {
                         <p className="font-bold mb-2">Nom du produit 2</p>
                         <div class = "flex flew-row">
                             <p className="mb-2">Categories du produit 2</p>
-                            <img src={Croix} alt="supprimer" className="w-5 h-5 ml-40" />
+                            <img src={Croix} alt="supprimer" className="w-5 h-5 ml-64" />
                         </div>
                         <p class = "font-bold">100€ TTC</p>
                     </div>
@@ -49,7 +49,7 @@ function Cart() {
                         <p className="font-bold mb-2">Nom du produit 3</p>
                         <div class = "flex flew-row">
                             <p className="mb-2">Categories du produit 3</p>
-                            <img src={Croix} alt="supprimer" className="w-5 h-5 ml-40" />
+                            <img src={Croix} alt="supprimer" className="w-5 h-5 ml-64" />
                         </div>
                         <p class = "font-bold">100€ TTC</p>
                     </div>
