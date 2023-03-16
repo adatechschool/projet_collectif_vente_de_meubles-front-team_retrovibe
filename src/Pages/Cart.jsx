@@ -1,16 +1,16 @@
 /* page 5 de la maquette */
 import React from "react";
 import Chaise from "./chaise_exemple.jpg";
-import Croix from "./croix_supp.jpg";
+import Croix from "./croix_supp.png";
 
 function Cart() {
     return (
     <div className="flex flex-row justify-content-center">
         <div className="w-2/5 flex flex-col p-4 ml-40">
             <h2 className="text-xl font-bold mb-4 ml-4">Panier (nb_articles)</h2>
-            <div className="flex items-center bg-white p-4 rounded-md mb-4 shadow-lg h-48 border-2 border-black">
+            <div className="flex items-center bg-white p-4 rounded-md mb-4 shadow-lg h-48 ">
                 <div className="flex flex-row">
-                    <div className="w-1/5 h-4/6 rounded-full overflow-hidden mr-4 mt-5">
+                    <div className="w-1/5 h-4/6 rounded-full overflow-hidden mr-4 mt-2">
                         <img src={Chaise} alt="Nom du produit 1" />
                     </div>
                     <div class = "flex flex-col">
@@ -18,38 +18,38 @@ function Cart() {
                         <div class = "flex flew-row">
                             <p className="mb-2">Categories du produit 1</p>
                             <div>
-                                <img src={Croix} alt="supprimer" className="w-5 h-5 ml-64"/>
+                            <img src={Croix} alt="supprimer" className="w-10 h-10 ml-64 p-3 bg-violet-400 rounded-full"/>
                             </div>
                         </div>
                         <p class = "font-bold">100€ TTC</p>
                     </div>
                 </div>
             </div>
-            <div className="flex items-center bg-white p-4 rounded-md mb-4 shadow-lg h-48 border-2 border-black">
+            <div className="flex items-center bg-white p-4 rounded-md mb-4 shadow-lg h-48">
                 <div className="flex flex-row">
-                    <div className="w-1/5 h-4/6 rounded-full overflow-hidden mr-4 mt-5">
+                    <div className="w-1/5 h-4/6 rounded-full overflow-hidden mr-4 mt-2">
                         <img src={Chaise} alt="Nom du produit 1" />
                     </div>
                     <div class = "flex flex-col">
                         <p className="font-bold mb-2">Nom du produit 2</p>
                         <div class = "flex flew-row">
                             <p className="mb-2">Categories du produit 2</p>
-                            <img src={Croix} alt="supprimer" className="w-5 h-5 ml-64" />
+                            <img src={Croix} alt="supprimer" className="w-10 h-10 ml-64 p-3 bg-violet-400 rounded-full" fill="white"/>
                         </div>
                         <p class = "font-bold">100€ TTC</p>
                     </div>
                 </div>
             </div>
-            <div className="flex items-center bg-white p-4 rounded-md mb-4 shadow-lg h-48 border-2 border-black">
+            <div className="flex items-center bg-white p-4 rounded-md mb-4 shadow-lg h-48">
                 <div className="flex flex-row">
-                    <div className="w-1/5 h-4/6 rounded-full overflow-hidden mr-4 mt-5">
+                    <div className="w-1/5 h-4/6 rounded-full overflow-hidden mr-4 mt-2">
                         <img src={Chaise} alt="Nom du produit 1" />
                     </div>
                     <div class = "flex flex-col">
                         <p className="font-bold mb-2">Nom du produit 3</p>
                         <div class = "flex flew-row">
                             <p className="mb-2">Categories du produit 3</p>
-                            <img src={Croix} alt="supprimer" className="w-5 h-5 ml-64" />
+                            <img src={Croix} alt="supprimer" className="w-10 h-10 ml-64 p-3 bg-violet-400 rounded-full" fill="white"/>
                         </div>
                         <p class = "font-bold">100€ TTC</p>
                     </div>
