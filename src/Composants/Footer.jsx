@@ -8,7 +8,7 @@ function Footer() {
                     <h2 class="mb-3 text-sm font-semibold text-violet-300 uppercase">Company</h2>
                     <ul class="text-violet-300">
                         <li class="mb-2">
-                            <a href="#" class=" dark:hover:text-violet-700">About</a>
+                            <a href="/about" class=" dark:hover:text-violet-700">About</a>
                         </li>
                         <li class="mb-2">
                             <a href="#" class="dark:hover:text-violet-700">Careers</a>
