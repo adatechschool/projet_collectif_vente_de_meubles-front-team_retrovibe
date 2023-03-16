@@ -4,8 +4,8 @@ import React from 'react';
 
 function Connexion() {
   return (
-    <div class = "flex flex-row justify-center">
-      <form class = "mr-6">
+    <div class = "flex justify-center mt-32">
+      <form class = "mr-16 text-center">
         <h1 class="mt-6 mb-6 text-center">Déjà client.e ?</h1>
         <div class="mb-6 flex flex-row">
           <div>
@@ -24,7 +24,7 @@ function Connexion() {
 
       </div>
 
-      <form class = "ml-6">
+      <form class = "ml-16 text-center">
         <h1 class="mt-6 mb-6 text-center">Pas encore client.e ?</h1>
             <div class="mb-6 flex flex-row">
               <div class="mr-4">
