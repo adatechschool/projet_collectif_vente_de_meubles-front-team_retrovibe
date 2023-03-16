@@ -7,7 +7,7 @@ function connectedAdmin(){
         <div class="w-full pl-60 pr-60">
         <div class = "grid grid-cols-3 gap-4 justify-self-center">
             <div class = "mt-20 col-span-2" >
-                 <h2>Espace administration</h2>
+                 <h2 class="font-bold">Espace administration</h2>
                  <div class = "mt-10 p-1 text-center grid grid-cols-4 gap-1 shadow-md text-violet-700">
                     <p>Nom article</p>
                     <p>Prix</p>
@@ -26,7 +26,7 @@ function connectedAdmin(){
 
             </div>
             <div class="mt-20 flex flex-col shadow-md justify-center">
-                <h2 class=" mb-6 text-center">Ajouter un article</h2>
+                <h2 class="font-bold mb-6 text-center">Ajouter un article</h2>
                 <form class = "ml-6">
                     <div class="m-4 ">
                         <input  placeholder="nom" required type="text" id="nomArticle" class="w-full bg-slate-100 border-2 border-violet-400 text-gray-900 text-sm rounded-lg focus:outline-none block p-2.5 hover:border-violet-700" />
