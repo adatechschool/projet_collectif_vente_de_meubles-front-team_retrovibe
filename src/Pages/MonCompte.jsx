@@ -1,8 +1,24 @@
-import React from "react";
+import React, {useEffect, useState } from "react";
+import axios from 'axios';
+import { useParams } from 'react-router-dom';
 
-function test2() {
+function SendtoRightPage() {
 
     // var idValue = localStorage.getItem('id')
+
+    const [utilisateurs, setUtilisateurs] = useState([]);
+
+    useEffect(() => {
+
+        axios.get(`https://retrovibe.herokuapp.com/api/utilisateurs`)
+        .then(response => {
+        setUtilisateurs(response.data);
+        })
+        .catch(error => {
+        console.log(error);
+        });
+    },[])
+    console.log(utilisateurs);
 
     return (
         
@@ -13,6 +29,4 @@ function test2() {
     )
 }
 
-
-
-export default test2;
+export default SendtoRightPage;

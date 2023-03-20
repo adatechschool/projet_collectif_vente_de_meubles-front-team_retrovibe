@@ -13,9 +13,9 @@ function Cart() {
                     <div className="w-1/5 h-4/6 rounded-full overflow-hidden mr-4 mt-2">
                         <img src={Chaise} alt="Nom du produit 1" />
                     </div>
-                    <div class = "flex flex-col">
+                    <div className = "flex flex-col">
                         <p className="font-bold mb-2">Nom du produit 1</p>
-                        <div class = "flex flew-row">
+                        <div className = "flex flew-row">
                             <p className="mb-2">Categories du produit 1</p>
                             <div>
                             <img src={Croix} alt="supprimer" className="w-10 h-10 ml-64 p-3 bg-violet-400 rounded-full"/>
