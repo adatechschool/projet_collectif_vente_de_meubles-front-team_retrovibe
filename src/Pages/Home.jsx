@@ -10,7 +10,7 @@ function Home() {
 
 
     return (
-        <div class="w-100 relative pl-48 pr-48 grow h-full">
+        <div className="w-100 relative pl-48 pr-48 grow h-full">
             
                 <Article/>
             

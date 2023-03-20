@@ -1,24 +1,33 @@
 /* page 2 de la maquette */
-import React, {useEffect, useState} from "react";
+import React, {useEffect, useState } from "react";
+// import de la méthode useParams pour accéder aux infos de mon adresse navigateur
+import { useParams } from 'react-router-dom';
 import BtnCart from '../Composants/BtnCart';
 import axios from 'axios';
 
 
 function Product() {
 
-     const [meubles, setMeubles] = useState([]);
+
+    
+     const [meuble, setMeuble] = useState({});
+
+    // je recupère mon id du meuble dans l'adresse de mon navigateur avec useParams
+     const { id } = useParams();
+
      useEffect(() => {
-       axios.get('https://retrovibe.herokuapp.com/api/meubles/91')
+        // j'ajoute mon id du meuble dans ma requête
+       axios.get(`https://retrovibe.herokuapp.com/api/meubles/${id}`)
          .then(response => {
-           setMeubles(response.data);
+           setMeuble(response.data);
          })
          .catch(error => {
            console.log(error);
          });
-     }, []);
+     }, [id]);
 
    
-     console.log('nom', meubles.length)
+     console.log('nom', meuble.length)
 
     //  const name = meubles.nom;
     //  console.log('nom', name)
@@ -26,69 +35,68 @@ function Product() {
     return (
 
         // PHOTO PRINCIPALE
-        <div class="flex flex-row justify-center items-cente gap-9 mt-16">
-            <div class="w-2/5">
-                <img class="rounded-lg border-4 border-mosque-400" src={meubles.photo_1} alt="visuel principal de l'article" />
+        <div className="flex flex-row justify-center items-cente gap-9 mt-16">
+            <div className="w-2/5">
+                <img className="rounded-lg border-4 border-mosque-400" src={meuble.photo_1} alt="visuel principal de l'article" />
             </div>
 
             {/* DIV PHOTOS */}
-            <div class="flex flex-col justify-between">
+            <div className="flex flex-col justify-start gap-1.5">
                 
-                {meubles.photo_2 !== null &&
+                {meuble.photo_2 !== null &&
                     <div>
-                        <img class="w-32 h-32 rounded-lg" src={meubles.photo_2} alt="2e visuel de l'article" />
+                        <img className="w-32 h-32 rounded-lg" src={meuble.photo_2} alt="2e visuel de l'article" />
                     </div>
                     }
-                {meubles.photo_3 &&
+                {meuble.photo_3 &&
                     <div>
-                        <img class="w-32 h-32 rounded-lg" src={meubles.photo_3} alt="3e visuel de l'article" />
+                        <img className="w-32 h-32 rounded-lg" src={meuble.photo_3} alt="3e visuel de l'article" />
                     </div>
                     }
-                {meubles.photo_4 ?
+                {meuble.photo_4 ?
                     <div>
-                        <img class="w-32 h-32 rounded-lg" src={meubles.photo_4} alt="4e visuel de l'article" />
+                        <img className="w-32 h-32 rounded-lg" src={meuble.photo_4} alt="4e visuel de l'article" />
                     </div>
                     : null}
-                {meubles.photo_5 !== null &&
+                {meuble.photo_5 !== null &&
                     <div>
-                        <img class="w-32 h-32 rounded-lg" src={meubles.photo_5} alt="5e visuel de l'article" />
+                        <img className="w-32 h-32 rounded-lg" src={meuble.photo_5} alt="5e visuel de l'article" />
                     </div>
                     }
             </div>
 
             {/* DIV INFOS */}
-            <div class="shadow-lg ml-10 pl-10 pt-10 pr-10">
+            <div className="shadow-lg ml-10 pl-10 pt-10 pr-10">
                 <div>
-                    <h1 class="text-2xl pb-4">{meubles.nom}</h1>
-                    <div class="pb-14">
-                        <h1 class="text-4xl font-bold">{meubles.prix}<span class="text-xl font-normal ">€TCC</span></h1>
+                    <h1 className="text-2xl pb-4">{meuble.nom}</h1>
+                    <div className="pb-14">
+                        <h1 className="text-4xl font-bold">{meuble.prix}<span className="text-xl font-normal ">€TCC</span></h1>
                     </div>
                 </div>
-                <div class="text-lg space-y-1 italic font-light">
-                    <h1>{meubles.type}</h1>
+                <div className="text-lg space-y-1 italic font-light">
+                    <h1>{meuble.type}</h1>
+                    {meuble.annee && <h1>{meuble.annee}</h1>}
                     <h1>couleur(s) :
                         <ul>
-                            <li>{meubles.couleur_1}</li>
-                            {meubles.couleur_2 && <li>{meubles.couleur_2}</li>}
+                            <li>{meuble.couleur_1}</li>
+                            {meuble.couleur_2 && <li>{meuble.couleur_2}</li>}
                         </ul>
+                    <h1>matiere(s) : 
+                        <ul>
+                            <li>{meuble.matiere_1}</li>
+                            {meuble.matiere_2 && <li>{meuble.matiere_2}</li>}
+                        </ul>
+                    </h1>
                     </h1>
                     <h1>dimensions : 
                         <ul>
-                            <li>longueur : {meubles.longueur} cm</li>
-                            <li>largeur : {meubles.largeur} cm</li>
-                            <li>hauteur : {meubles.hauteur} cm</li>
+                            <li>longueur : {meuble.longueur} cm</li>
+                            <li>largeur : {meuble.largeur} cm</li>
+                            <li>hauteur : {meuble.hauteur} cm</li>
                         </ul>
                     </h1>
-                    <h1>matiere(s) : 
-                        <ul>
-                            <li>{meubles.matiere_1}</li>
-                            {meubles.matiere_2 && <li>{meubles.matiere_2}</li>}
-                        </ul>
-                    </h1>
-                    {meubles.annee && <h1>{meubles.annee}</h1>}
-                    
                 </div>
-                <div class="pt-10">
+                <div className="pt-10">
                    <BtnCart />
                 </div>
             </div>
@@ -96,4 +104,6 @@ function Product() {
 
     )
 };
+
+
 export default Product;
