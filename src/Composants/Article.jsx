@@ -1,22 +1,59 @@
-import React from 'react'
+import React, {useEffect, useState} from "react";
 import BtnCart from "../Composants/BtnCart";
+import axios from 'axios';
 
-function Article() { 
-    return(
-    <div  id="articleHome" class="z-0 relative justify-self-center">
-        <div class='absolute bottom-12 right-5'>                 
-            <BtnCart/>
-        </div> 
-        <a href="/product">
-        <img src="https://cdn1.vente-unique.com/thumbnails/product/444/444517/product_raw/xs/fauteuil_9488677.jpg" class="w-64 h-64 object-cover rounded-lg "></img>
-        </a>
-        <div class= "m-4">
-            <h3> Titre article</h3>
-            <p class="text-xs"> Catégorie artice</p>
-            <p class="text-xl"> Prix </p>
-        </div>
-    </div>      
-)
-}
+function Article() {
+
+    /* J'utilise le hook d'état "useState" pour définir une variable d'état "meubles" et une fonction "setMeubles" 
+    pour mettre à jour cette variable. La valeur initiale de "meubles" est un tableau vide ([]).*/
+     const [meubles, setMeubles] = useState([]);
+   
+   /* utilise le hook d'effet "useEffect" pour exécuter une action lorsqu'un certain événement se produit 
+   (dans ce cas, lorsque le composant est monté).*/
+     useEffect(() => {
+   
+   /* J'effectue une requête HTTP GET à l'URL spécifiée et récupère les données renvoyées. Si la requête est réussie, 
+   les données renvoyées sont utilisées pour mettre à jour la variable d'état "meubles" à l'aide de la fonction "setMeubles". 
+   Si la requête échoue, une erreur est affichée dans la console.*/
+       axios.get('https://retrovibe.herokuapp.com/api/meubles')
+         .then(response => {
+           setMeubles(response.data);
+         })
+         .catch(error => {
+           console.log(error);
+         });
+     }, []);
+   
+     /* syntaxe si je veux recup dans une variable une info précise, ici le nom de l'article.
+      const nom = meubles.map(meuble => meuble.nom);*/
+     
+     /* A REUTILISER AVEC HELDER POUR LES SESSIONS
+      localStorage.setItem('id', photo[2]);
+      var idValue = localStorage.getItem('id')*/
+   
+ 
+   /* Je map sur tous mes objets dans mon tableau meubles. Pour chaque élément meuble du tableau, la fonction fléchée 
+   ((meuble, index) => ( est appelée et crée une div "articleHome" avec la structure qu'elle contient. 
+   index est la position de l'objet dans le tableau.*/    
+     return (
+         <div class= "flex gap-3 mt-20 justify-self-center">
+           {meubles.map((meuble, index) => (
+             <div id="articleHome" class="w-1/4 rounded-lg border-4 border-mosque-400 z-0 relative justify-self-center" key={index}>
+                 <a href="/product">
+                     <img class="rounded-lg border-4  border-violet-400 border-solid transition-all duration-1000 hover:border-violet-700 hover:border-dotted" src={meuble.photo_1} alt="visuel principal de l'article"></img>
+                 </a>
+                 <div class='bottom-12 right-5'>                 
+                     <BtnCart/>
+                 </div> 
+                 <div class= "m-4">
+                     <h3>{meuble.nom}</h3>
+                     <p class="text-xs">{meuble.type}</p>
+                     <p class="text-xl">{meuble.prix}</p>
+                 </div>
+             </div>
+           ))}
+         </div>
+       );
+     }
 
 export default Article;

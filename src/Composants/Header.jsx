@@ -12,16 +12,16 @@ function Header() {
                 </a>
             </div>
            
-            <div class='flex flex-row items-center my-9 border-2 border-violet-400 hover:border-violet-700 focus:outline-none rounded-full px-1 '>
+            <div class='flex flex-row items-center my-9 border-2 border-violet-400 transition-all duration-1000 hover:border-violet-700 focus:outline-none rounded-full px-1 '>
                 <form>
                     <input type = "search" placeholder= "Rechercher..." class = "w-50 focus:outline-none px-4 mr-20" ></input>
-                    <button type='submit' class= "w-8 h-8 bg-violet-400 rounded-full hover:bg-violet-700 focus:outline-none mx-2">🔍</button>                
+                    <button type='submit' class= "w-8 h-8 bg-violet-400 rounded-full transition-all duration-1000 hover:bg-violet-700 focus:outline-none mx-2">🔍</button>                
                 </form>
             </div>
            
             <div class='flex flex-row items-center mt-4 gap-4'>
                 <a href="/MonCompte">
-                <button type="submit" class="mb-6 text-white bg-violet-400 hover:bg-violet-700 focus:outline-none font-medium rounded-lg text-sm sm:w-auto px-5 py-2.5 text-center">Mon Compte</button>
+                <button type="submit" class="mb-6 text-white bg-violet-400 transition-all duration-1000 hover:bg-violet-700 focus:outline-none font-medium rounded-lg text-sm sm:w-auto px-5 py-2.5 text-center">Mon Compte</button>
                 </a>
                 <BtnCart/>
             </div>
