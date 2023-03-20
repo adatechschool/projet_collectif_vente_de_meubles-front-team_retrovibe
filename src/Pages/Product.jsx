@@ -85,6 +85,8 @@ function Product() {
                             {meubles.matiere_2 && <li>{meubles.matiere_2}</li>}
                         </ul>
                     </h1>
+                    {meubles.annee && <h1>{meubles.annee}</h1>}
+                    
                 </div>
                 <div class="pt-10">
                    <BtnCart />

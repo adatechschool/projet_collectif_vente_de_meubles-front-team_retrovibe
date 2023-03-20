@@ -36,10 +36,10 @@ function Article() {
    ((meuble, index) => ( est appelée et crée une div "articleHome" avec la structure qu'elle contient. 
    index est la position de l'objet dans le tableau.*/    
      return (
-         <div class= "flex gap-3 mt-20 justify-self-center">
+         <div class= "flex flex-wrap gap-3 mt-20 justify-center">
            {meubles.map((meuble, index) => (
-             <div id="articleHome" class="w-1/4 rounded-lg border-4 border-mosque-400 z-0 relative justify-self-center" key={index}>
-                 <a href="/product">
+             <div id="articleHome" class="w-1/5 rounded-lg border-4 border-mosque-400 z-0 relative" key={index}>
+                 <a href="/product/">
                      <img class="rounded-lg border-4  border-violet-400 border-solid transition-all duration-1000 hover:border-violet-700 hover:border-dotted" src={meuble.photo_1} alt="visuel principal de l'article"></img>
                  </a>
                  <div class='bottom-12 right-5'>                 
