@@ -23,7 +23,7 @@ function App() {
       <Route path='/moncompte' element={<MonCompte/>}/>
       <Route path='/connectedclient' element={<ConnectedClient/>}/>
       <Route path='/connectedadmin' element={<ConnectedAdmin/>}/>
-      <Route path='/product' element={<Product/>}/>
+      <Route path='/product/:id' element={<Product/>}/>
       <Route path='/about' element={<About/>}/>
       <Route path='/test' element={<Test/>}/>
     </Routes>
