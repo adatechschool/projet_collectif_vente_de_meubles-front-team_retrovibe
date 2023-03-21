@@ -27,10 +27,7 @@ function Product() {
      }, [id]);
 
    
-     console.log('nom', meuble.length)
-
-    //  const name = meubles.nom;
-    //  console.log('nom', name)
+    //  console.log('nom', meuble.length)
 
     return (
 
@@ -97,7 +94,7 @@ function Product() {
                     </h1>
                 </div>
                 <div className="pt-10">
-                   <BtnCart />
+                <BtnCart meubleId={meuble.id} />
                 </div>
             </div>
         </div>

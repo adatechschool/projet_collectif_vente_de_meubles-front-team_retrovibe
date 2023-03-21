@@ -24,12 +24,14 @@ function Article() {
          });
      }, []);
    
+    //  console.log("meubles", meubles)
      /* syntaxe si je veux recup dans une variable une info précise, ici le nom de l'article.
       const nom = meubles.map(meuble => meuble.nom);*/
      
-     /* A REUTILISER AVEC HELDER POUR LES SESSIONS
-      localStorage.setItem('id', photo[2]);
-      var idValue = localStorage.getItem('id')*/
+     //A REUTILISER AVEC HELDER POUR LES SESSIONS
+      // const nomMeuble = meubles[0]nom;
+      // console.log("nom", nomMeuble)
+      // var idValue = localStorage.getItem('id')
    
  
    /* Je map sur tous mes objets dans mon tableau meubles. Pour chaque élément meuble du tableau, la fonction fléchée 
@@ -49,7 +51,7 @@ function Article() {
                      <img className="rounded-lg border-4  border-violet-400 border-solid transition-all duration-1000 hover:border-violet-700 hover:border-dotted" src={meuble.photo_1} alt="visuel principal de l'article"></img>
                  </a>
                  <div className='bottom-12 right-5'>                 
-                     <BtnCart/>
+                      <BtnCart meubleId={meuble.id} />
                  </div> 
                  <div className= "m-4">
                      <h3>{meuble.nom}</h3>
