@@ -1,32 +1,32 @@
-import React, {useEffect, useState } from "react";
-import axios from 'axios';
+import React from 'react';
 import { useParams } from 'react-router-dom';
+import ConnectedClient from "../Pages/ConnectedClient";
+import ConnectedAdmin from "../Pages/ConnectedAdmin";
+import Log from "../Pages/Log";
+
 
 function SendtoRightPage() {
-
-    // var idValue = localStorage.getItem('id')
-
-    const [utilisateurs, setUtilisateurs] = useState([]);
-
-    useEffect(() => {
-
-        axios.get(`https://retrovibe.herokuapp.com/api/utilisateurs`)
-        .then(response => {
-        setUtilisateurs(response.data);
-        })
-        .catch(error => {
-        console.log(error);
-        });
-    },[])
-    console.log(utilisateurs);
-
-    return (
-        
-    <div>
-        <p>Ici on va seulement router vers Connexion ou Connected admin ou Connected client</p>
-        {/* <p>{idValue}</p> */}
-    </div>
-    )
+    // const idValue = localStorage.getItem('id')
+    const idValue = null;
+    if ( idValue == 81) {
+        return ( 
+            <div>
+                <ConnectedAdmin/>
+            </div>
+        )   
+    } else if (idValue == null) {
+        return ( 
+            <div>
+                <Log/>
+            </div>
+        )   
+    } else {
+        return (
+            <div>
+                <ConnectedClient/>
+            </div> 
+        )
+    }
 }
 
 export default SendtoRightPage;

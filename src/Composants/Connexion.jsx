@@ -6,10 +6,13 @@ import axios from 'axios';
 function Connexion (){
 
     const { register, handleSubmit, watch, formState: { error } } = useForm();
-    const onSubmit = data => axios.get("https://cors-anywhere.herokuapp.com/https://retrovibe.herokuapp.com/api/utilisateurs", {
+    const onSubmit = data => axios.post("https://cors-anywhere.herokuapp.com/https://retrovibe.herokuapp.com/api/utilisateurs", {
+      email : data.email,
+      mot_de_passe : data.mot_de_passe
     })
     .then(function (response){
-      for (let i=0; i<response.data.length; i++){
+      console.log(response.data)
+     /*  for (let i=0; i<response.data.length; i++){
         if (response.data[i].email === data.email){
           console.log("le mail marche")
           if (response.data[i].mot_de_passe === data.mot_de_passe){
@@ -17,7 +20,7 @@ function Connexion (){
           }
           else {console.log("Mot de passe incorrect")}
         }
-      }
+      } */
     })
 
 
