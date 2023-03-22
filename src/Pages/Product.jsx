@@ -34,7 +34,7 @@ function Product() {
         // PHOTO PRINCIPALE
         <div className="flex flex-row justify-center items-cente gap-9 mt-16">
             <div className="w-2/5">
-                <img className="rounded-lg border-4 border-turbo-500" src={meuble.photo_1} alt="visuel principal de l'article" />
+                <img className="rounded-lg border-4 border-candlelight-500" src={meuble.photo_1} alt="visuel principal de l'article" />
             </div>
 
             {/* DIV PHOTOS */}
