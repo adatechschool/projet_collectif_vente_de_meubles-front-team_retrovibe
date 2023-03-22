@@ -11,6 +11,7 @@ import Product from './Pages/Product';
 import About from './Pages/About';
 import Footer  from './Composants/Footer';
 import Test  from './Pages/Test';
+import SearchPage from './Pages/SearchPage';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
       <Route path='/product/:id' element={<Product/>}/>
       <Route path='/about' element={<About/>}/>
       <Route path='/test' element={<Test/>}/>
+      <Route path='/searchPage' element={<SearchPage/>}/>
     </Routes>
     <Footer/> 
     </>
