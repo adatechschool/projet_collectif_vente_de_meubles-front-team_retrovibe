@@ -44,7 +44,7 @@ function Article() {
      return (
          <div className= "flex flex-wrap gap-3 mt-20 justify-center">
            {meubles.map((meuble, index) => (
-             <div id="articleHome" className="w-1/5 rounded-lg border-4 border-mosque-400 z-0 relative" key={index}>
+             <div id="articleHome" className="w-1/5 rounded-lg border-4 border-turbo-500 z-0 relative" key={index}>
 
                 {/* j'ajoute dans mon adresse mon id du meuble */}
                  <a href={`/product/${meuble.id}`}>
