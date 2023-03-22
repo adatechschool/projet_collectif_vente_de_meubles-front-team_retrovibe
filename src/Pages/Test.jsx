@@ -4,17 +4,13 @@ import axios from 'axios';
 
 function Test() {
 
-   /* J'utilise le hook d'état "useState" pour définir une variable d'état "meubles" et une fonction "setMeubles" 
-   pour mettre à jour cette variable. La valeur initiale de "meubles" est un tableau vide ([]).*/
+   
     const [meubles, setMeubles] = useState([]);
   
-  /* utilise le hook d'effet "useEffect" pour exécuter une action lorsqu'un certain événement se produit 
-  (dans ce cas, lorsque le composant est monté).*/
+  
     useEffect(() => {
   
-  /* J'effectue une requête HTTP GET à l'URL spécifiée et récupère les données renvoyées. Si la requête est réussie, 
-  les données renvoyées sont utilisées pour mettre à jour la variable d'état "meubles" à l'aide de la fonction "setMeubles". 
-  Si la requête échoue, une erreur est affichée dans la console.*/
+ 
       axios.get('https://retrovibe.herokuapp.com/api/meubles')
         .then(response => {
           setMeubles(response.data);
@@ -24,17 +20,7 @@ function Test() {
         });
     }, []);
   
-    /* syntaxe si je veux recup dans une variable une info précise, ici le nom de l'article.
-     const nom = meubles.map(meuble => meuble.nom);*/
-    
-    /* A REUTILISER AVEC HELDER POUR LES SESSIONS
-     localStorage.setItem('id', photo[2]);
-     var idValue = localStorage.getItem('id')*/
-  
-
-  /* Je map sur tous mes objets dans mon tableau meubles. Pour chaque élément meuble du tableau, la fonction fléchée 
-  ((meuble, index) => ( est appelée et crée une div "articleHome" avec la structure qu'elle contient. 
-  index est la position de l'objet dans le tableau.*/    
+ 
     return (
         <div classNameName= "flex gap-3 mt-20 justify-self-center">
           {meubles.map((meuble, index) => (
@@ -56,8 +42,111 @@ function Test() {
       );
     }
 
+    // function Cart() {
+
+//     let meubleId = localStorage.getItem('cart');
+//     console.log("meubleId", meubleId)
+
+//     const [meuble, setMeuble] = useState([]);
+//      useEffect(() => {
+//         // j'ajoute mon id du meuble dans ma requête
+//        axios.get(`https://retrovibe.herokuapp.com/api/meubles/${meubleId}`)
+//          .then(response => {
+//            setMeuble(response.data);
+//          })
+//          .catch(error => {
+//            console.log(error);
+//          });
+//      }, [meubleId]);
+
+    //  console.log("meubles", meubles)
+
+
+
+    
+        //Promise.all(
+            
+            // meubleId.map(id =>
+            //     axios.get(`https://retrovibe.herokuapp.com/api/meubles/${id}`)
+            // ).then(response => {
+            //     console.log("data", response)
+            //     const meublesData = response.map(res => res.data);
+            //     setMeubles(meublesData);
+            // })
+            // .catch(error => {
+            // console.log(error);
+            // })
+        //)
+
+
+       // setMeubles(meubles => [...meubles, response.data]
+
+
+
+    //    function Cart() {
+
+    //     const [meubles, setMeubles] = useState([]);
+    //     useEffect(() => {
+            
+    //         let meubleId = JSON.parse(localStorage.getItem('cart'));
+    
+    //         console.log("meubleId", meubleId)
+    
+    //         for(let i = 0; i < meubleId.length; i++) {
+    //             axios.get(`https://retrovibe.herokuapp.com/api/meubles/${meubleId[i]}`)
+    //             .then(response => setMeubles(meubles => [...meubles, response.data]))
+    //         }
+    //     }, []);
+    
+    // console.log("total", meubles)
+    
+    
+    //     return (
+    //         <div className="flex-column justify-center">
+    //         {meubles.map((meuble, index) => (
+    
+    //         <div className="w-8/12 flex flex-col p-4 ml-40" key={index}>
+    //             <h2 className="text-xl font-bold mb-4 ml-4">Panier (nb_articles)</h2>
+    //             <div className="flex items-center bg-white p-4 rounded-md mb-4 shadow-lg h-48 ">
+    //                 <div className="flex flex-row">
+    //                     <div className="w-1/5 h-4/6 rounded-full overflow-hidden mr-4 mt-2">
+    //                         <img src={meuble.photo_1} alt="Visuel principal du produit" />
+    //                     </div>
+    //                     <div class = "flex flex-col">
+    //                         <p className="font-bold mb-2">{meuble.nom}</p>
+    //                         <div class = "flex flew-row">
+    //                             <p className="mb-2">{meuble.type}</p>
+    //                             <div>
+    //                             <img src={Croix} alt="supprimer" className="w-10 h-10 ml-64 p-3 bg-violet-400 rounded-full"/>
+    //                             </div>
+    //                         </div>
+    //                         <p class = "font-bold">{meuble.prix}</p>
+    //                     </div>
+    //                 </div>
+    //             </div>
+    //             </div>
+    //            ))} 
+    //             </div>
+    //     )
+    //         }
     export default Test;
 
+    // function Cart() {
 
+    //   const [meubles, setMeubles] = useState([]);
+    //   useEffect(() => {
+    //       const fetchMeuble = async()=> {
+    //           for(let i = 0; i < meubleId.length; i++) {
+    //               const pouette = await axios.get(`https://retrovibe.herokuapp.com/api/meubles/${meubleId[i]}`)
+    //                 .then(response => console.log(response.data));
+    //                 console.log('pouette', pouette)
+    //             }
+    //           }
+    //       let meubleId = JSON.parse(localStorage.getItem('cart'));
+  
+    //       console.log("meubleId", meubleId)
+  
+      
+    //   }, []);
 
 
