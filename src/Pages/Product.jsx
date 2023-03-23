@@ -27,17 +27,14 @@ function Product() {
      }, [id]);
 
    
-     console.log('nom', meuble.length)
-
-    //  const name = meubles.nom;
-    //  console.log('nom', name)
+    //  console.log('nom', meuble.length)
 
     return (
 
         // PHOTO PRINCIPALE
         <div className="flex flex-row justify-center items-cente gap-9 mt-16">
             <div className="w-2/5">
-                <img className="rounded-lg border-4 border-mosque-400" src={meuble.photo_1} alt="visuel principal de l'article" />
+                <img className="rounded-lg border-4 border-candlelight-500" src={meuble.photo_1} alt="visuel principal de l'article" />
             </div>
 
             {/* DIV PHOTOS */}
@@ -97,7 +94,7 @@ function Product() {
                     </h1>
                 </div>
                 <div className="pt-10">
-                   <BtnCart />
+                <BtnCart meubleId={meuble.id} />
                 </div>
             </div>
         </div>

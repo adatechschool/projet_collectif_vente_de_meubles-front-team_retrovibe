@@ -2,19 +2,13 @@ import React from 'react';
 
 function Footer() {
     return (
-        <footer className="bg-white mt-20 w-full grow-0 ">
+        <footer className="bg-white mt-20 w-full grow-0 sticky">
             <div className="flex flex-row justify-around bg-zinc-50">
                 <div>
                     <h2 className="mb-3 text-sm font-semibold text-violet-300 uppercase">Company</h2>
                     <ul className="text-violet-300">
                         <li className="mb-2">
                             <a href="/about" className=" dark:hover:text-violet-700">About</a>
-                        </li>
-                        <li className="mb-2">
-                            <a href="#" className="dark:hover:text-violet-700">Careers</a>
-                        </li>
-                        <li className="mb-2">
-                            <a href="#" className="dark:hover:text-violet-700">Brand Center</a>
                         </li>
                         <li className="mb-2">
                             <a href="#" className="dark:hover:text-violet-700">Blog</a>
@@ -24,12 +18,6 @@ function Footer() {
                 <div>
                     <h2 className="mb-3 text-sm font-semibold text-violet-300 uppercase">Help center</h2>
                     <ul className="text-violet-300">
-                        <li className="mb-2">
-                            <a href="#" className="dark:hover:text-violet-700">Discord Server</a>
-                        </li>
-                        <li className="mb-2">
-                            <a href="#" className="dark:hover:text-violet-700">Twitter</a>
-                        </li>
                         <li className="mb-2">
                             <a href="#" className="dark:hover:text-violet-700">Facebook</a>
                         </li>
@@ -45,9 +33,6 @@ function Footer() {
                             <a href="#" className="dark:hover:text-violet-700">Privacy Policy</a>
                         </li>
                         <li className="mb-2">
-                            <a href="#" className="dark:hover:text-violet-700">Licensing</a>
-                        </li>
-                        <li className="mb-2">
                             <a href="#" className="dark:hover:text-violet-700">Terms &amp; Conditions</a>
                         </li>
                     </ul>
@@ -60,12 +45,6 @@ function Footer() {
                         </li>
                         <li className="mb-2">
                             <a href="#" className="dark:hover:text-violet-700">Android</a>
-                        </li>
-                        <li className="mb-2">
-                            <a href="#" className="dark:hover:text-violet-700">Windows</a>
-                        </li>
-                        <li className="mb-2">
-                            <a href="#" className="dark:hover:text-violet-700 ">MacOS</a>
                         </li>
                     </ul>
                 </div>
