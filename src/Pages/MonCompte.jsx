@@ -6,8 +6,8 @@ import Log from "../Pages/Log";
 
 
 function SendtoRightPage() {
-    // const idValue = localStorage.getItem('id')
-    const idValue = null;
+    const idValue = localStorage.getItem('Id_ConnectedUser')
+    console.log(idValue);
     if ( idValue == 81) {
         return ( 
             <div>

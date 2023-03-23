@@ -3,24 +3,28 @@ import { useForm } from "react-hook-form";
 import Auth from './Auth';
 import axios from 'axios';
 
+
+// import { useState } from 'react';
+// const [isLoggedIn, setIsLoggedIn] = useState(false);
+// setIsLoggedIn(true);
+
 function Connexion (){
 
     const { register, handleSubmit, watch, formState: { error } } = useForm();
-    const onSubmit = data => axios.post("https://cors-anywhere.herokuapp.com/https://retrovibe.herokuapp.com/api/utilisateurs", {
-      email : data.email,
-      mot_de_passe : data.mot_de_passe
-    })
+    const onSubmit = data => axios.get("https://cors-anywhere.herokuapp.com/https://retrovibe.herokuapp.com/api/utilisateurs")
     .then(function (response){
       console.log(response.data)
-     /*  for (let i=0; i<response.data.length; i++){
+      for (let i=0; i<response.data.length; i++){
         if (response.data[i].email === data.email){
-          console.log("le mail marche")
-          if (response.data[i].mot_de_passe === data.mot_de_passe){
-            console.log("log in accepté")
-          }
-          else {console.log("Mot de passe incorrect")}
-        }
-      } */
+          axios.get(`https://cors-anywhere.herokuapp.com/https://retrovibe.herokuapp.com/api/utilisateurs/${response.data[i].id}?email=${data.email}&mot_de_passe=${data.mot_de_passe}`)
+            .then(function (response2){
+              console.log(response2.data)
+              localStorage.setItem('Id_ConnectedUser',response2.data.id);
+              console.log(localStorage.getItem('Id_ConnectedUser'))
+            })
+          break;
+        } else {console.log("mail incorrect");}
+      }
     })
 
 
