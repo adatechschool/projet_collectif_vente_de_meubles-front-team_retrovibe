@@ -30,6 +30,7 @@ function Cart() {
 
 
     return (
+
     <div className="relative mx-60 py-20 flex flex-row">
         <div className="w-8/12 flex flex-col"> 
                 <h2 className="text-3xl text-candlelight-500 font-bold mb-4">Votre panier contient {meubles.length} articles</h2>
@@ -41,6 +42,7 @@ function Cart() {
                 <div className="justify-around items-center flex flex-row bg-white p-4 border-2 border-candlelight-500 rounded-md mb-4 shadow-lg h-48 ">
                         <div className="w-1/5 h-4/6 rounded-full">
                             <img src={meuble.photo_1} alt="Visuel principal du produit" />
+
                         </div>
                         <div class = "flex flex-col">
                             <p className="font-bold mb-2">{meuble.nom}</p>
