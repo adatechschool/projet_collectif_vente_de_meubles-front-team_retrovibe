@@ -30,30 +30,26 @@ function Cart() {
 
 
     return (
-    <div className="relative mx-60 py-20 flex flex-row justify-content-center">
+    <div className="relative mx-60 py-20 flex flex-row">
         <div className="w-8/12 flex flex-col"> 
-                <h2 className="text-3xl text-candlelight-500 font-bold mt-8 mb-2">Votre panier contient {meubles.length} articles:</h2>
-                <div class="mt-2"><ClearCartButton /></div>
+                <h2 className="text-3xl text-candlelight-500 font-bold mb-4">Votre panier contient {meubles.length} articles</h2>
+                <div><ClearCartButton /></div>
 
             {meubles.map((meuble, index) => (
             <div className="w-3/4 flex flex-col py-4" key={meuble.id}>
                 <h2 className="text-xl text-violet-400 font-bold mb-4">Article n°{index + 1}</h2>
-                <div className="flex items-center bg-white p-4 border-2 border-candlelight-500 rounded-md mb-4 shadow-lg h-48 ">
-                    <div className="flex flex-row justify-evenly">
-                        <div className="w-1/5 h-4/6 rounded-full overflow-hidden">
+                <div className="justify-around items-center flex flex-row bg-white p-4 border-2 border-candlelight-500 rounded-md mb-4 shadow-lg h-48 ">
+                        <div className="w-1/5 h-4/6 rounded-full">
                             <img src={meuble.photo_1} alt="Visuel principal du produit" />
                         </div>
                         <div class = "flex flex-col">
                             <p className="font-bold mb-2">{meuble.nom}</p>
-                            <div class = "flex flew-row">
-                                <p className="mb-2">{meuble.type}</p>
-                                <div>
-                                    <img src={Croix} alt="supprimer" className="w-10 h-10 p-3 bg-violet-400 rounded-full"/>
-                                </div>
-                            </div>
+                            <p className="mb-2">{meuble.type}</p>
                             <p class = "font-bold">{meuble.prix}</p>
                         </div>
-                    </div>
+                        <div>
+                            <img src={Croix} alt="supprimer" className="w-10 h-10 p-3 bg-violet-400 rounded-full"/>
+                        </div>
                 </div>
             </div>
             ))}  
