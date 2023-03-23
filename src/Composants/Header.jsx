@@ -5,7 +5,7 @@ import Searchbutton from './Searchbutton';
 
 function Header() {
     return(
-        <div className = "bg-white flex flex-row justify-evenly shadow-md sticky w-full top-0 z-10">
+        <div className = "bg-white flex flex-row justify-around shadow-md sticky w-full top-0 z-10">
             <div>
                 <a href="/home"className = "flex flex-row items-center">
                 <img src = {logo} className = "w-28" alt= "logo de notre site Retrovibe" />

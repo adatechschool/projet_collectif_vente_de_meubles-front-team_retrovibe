@@ -41,19 +41,19 @@ function Cart() {
             <div className="w-3/4 flex flex-col p-4 ml-20" key={meuble.id}>
                 <h2 className="text-xl text-violet-400 font-bold mb-4 ml-2">Article n°{index + 1}</h2>
                 <div className="flex items-center bg-white p-4 border-2 border-candlelight-500 rounded-md mb-4 shadow-lg h-48 ">
-                    <div className="flex flex-row">
-                        <div className="w-1/5 h-4/6 rounded-full overflow-hidden mr-4 mt-2">
-                            <img src={meuble.photo_1} alt="Visuel principal du produit" />
+                    <div className="flex flex-row border">
+                        <div className="w-1/5 h-4/6 rounded-full overflow-hidden mr-4 mt-2 border">
+                            <img src={meuble.photo_1} alt="Visuel principal du produit border" />
                         </div>
-                        <div class = "flex flex-col">
-                            <p className="font-bold mb-2">{meuble.nom}</p>
-                            <div class = "flex flew-row">
+                        <div class = "flex flex-col border">
+                            <p className="font-bold mb-2 border">{meuble.nom}</p>
+                            <div class = "flex flew-row border">
                                 <p className="mb-2">{meuble.type}</p>
                                 <div>
-                                    <img src={Croix} alt="supprimer" className="w-10 h-10 ml-64 p-3 bg-violet-400 rounded-full"/>
+                                    <img src={Croix} alt="supprimer" className="w-10 h-10 ml-64 p-3 bg-violet-400 rounded-full border"/>
                                 </div>
                             </div>
-                            <p class = "font-bold">{meuble.prix}</p>
+                            <p class = "font-bold border">{meuble.prix}</p>
                         </div>
                     </div>
                 </div>

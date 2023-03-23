@@ -32,13 +32,13 @@ function Product() {
     return (
 
         // PHOTO PRINCIPALE
-        <div className="flex flex-row justify-center items-cente gap-9 mt-16">
-            <div className="w-2/5">
-                <img className="rounded-lg border-4 border-candlelight-500" src={meuble.photo_1} alt="visuel principal de l'article" />
+        <div className="flex flex-row justify-between my-16 mx-28 border">
+            <div>
+                <img className=" h-full rounded-lg border-4 border-candlelight-500" src={meuble.photo_1} alt="visuel principal de l'article" />
             </div>
 
             {/* DIV PHOTOS */}
-            <div className="flex flex-col justify-start gap-1.5">
+            <div className="flex flex-col justify-start">
                 
                 {meuble.photo_2 !== null &&
                     <div>
