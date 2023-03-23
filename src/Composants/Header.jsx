@@ -1,12 +1,11 @@
 import React from 'react';
 import logo from './logo-retrovibe.png';
 import CartButtonPage from './CartButtonPage';
-/* import Searchbutton from './Searchbutton'; */
 import Searchbar from './Searchbar';
 
 function Header() {
     return(
-        <div className = "bg-white flex flex-row align-baseline justify-evenly shadow-md sticky w-full top-0 z-10 pb-2">
+        <div className = "bg-white flex flex-row align-baseline justify-evenly shadow-md sticky w-full top-0 z-10 pb-4">
             <div>
                 <a href="/home"className = "flex flex-row items-center">
                 <img src = {logo} className = "w-28" alt= "logo de notre site Retrovibe" />
