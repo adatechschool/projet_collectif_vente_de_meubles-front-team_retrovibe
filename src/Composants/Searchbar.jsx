@@ -25,7 +25,7 @@ const handleSearchTerm = (e) => {
     return (
       <div className="relative">
           <div>
-            <form  className='flex flex-row mb-1 border-2 border-violet-400 transition-all duration-1000 hover:border-violet-700 focus:outline-none rounded-full px-1 '>
+            <form  className='pl-2.5 py-1 items-center flex flex-row mb-1 border-2 border-violet-400 transition-all duration-1000 hover:border-violet-700 focus:outline-none rounded-full px-1 '>
                 <input 
                 type = "search"
                 placeholder= "Rechercher..."
@@ -34,7 +34,7 @@ const handleSearchTerm = (e) => {
                 </input>
             </form>
           </div>
-         <div className="absolute top-8 left-0 flex">
+         <div className="absolute top-10 left-0 flex">
               {
               meubles 
                 .filter((val) => {
