@@ -8,8 +8,6 @@ import axios from 'axios';
 
 function Product() {
 
-
-    
      const [meuble, setMeuble] = useState({});
 
     // je recupère mon id du meuble dans l'adresse de mon navigateur avec useParams
@@ -71,22 +69,22 @@ function Product() {
                     </div>
                 </div>
                 <div className="text-lg space-y-1 italic font-light">
-                    <h1>{meuble.type}</h1>
-                    {meuble.annee && <h1>{meuble.annee}</h1>}
+                    <h1 className="font-medium not-italic">{meuble.type}</h1>
+                    {meuble.annee && <h1 className="font-medium not-italic">{meuble.annee}</h1>}
                     <h1>couleur(s) :
-                        <ul>
+                        <ul className="font-medium not-italic">
                             <li>{meuble.couleur_1}</li>
                             {meuble.couleur_2 && <li>{meuble.couleur_2}</li>}
                         </ul>
                     <h1>matiere(s) : 
-                        <ul>
+                        <ul className="font-medium not-italic">
                             <li>{meuble.matiere_1}</li>
                             {meuble.matiere_2 && <li>{meuble.matiere_2}</li>}
                         </ul>
                     </h1>
                     </h1>
                     <h1>dimensions : 
-                        <ul>
+                        <ul className="font-medium not-italic">
                             <li>longueur : {meuble.longueur} cm</li>
                             <li>largeur : {meuble.largeur} cm</li>
                             <li>hauteur : {meuble.hauteur} cm</li>

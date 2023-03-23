@@ -24,22 +24,13 @@ function Article() {
          });
      }, []);
    
-    //  console.log("meubles", meubles)
      /* syntaxe si je veux recup dans une variable une info précise, ici le nom de l'article.
       const nom = meubles.map(meuble => meuble.nom);*/
      
-     //A REUTILISER AVEC HELDER POUR LES SESSIONS
-      // const nomMeuble = meubles[0]nom;
-      // console.log("nom", nomMeuble)
-      // var idValue = localStorage.getItem('id')
-   
- 
    /* Je map sur tous mes objets dans mon tableau meubles. Pour chaque élément meuble du tableau, la fonction fléchée 
    ((meuble, index) => ( est appelée et crée une div "articleHome" avec la structure qu'elle contient. 
    index est la position de l'objet dans le tableau.*/    
 
-    // const meubleID = meubles[0].id;
-    // console.log(meubles)
 
      return (
          <div className= "flex flex-wrap gap-3 mt-20 justify-center">
