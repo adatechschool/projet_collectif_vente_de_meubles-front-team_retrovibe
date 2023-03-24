@@ -6,7 +6,7 @@ import Article from "../Composants/Article"
 
 function Home() {
     return (
-        <div className="w-100 relative px-16 grow h-full">
+        <div className="px-48 relative grow h-full">
             <Article/>
         </div>
 )}
