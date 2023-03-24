@@ -31,59 +31,77 @@ function Cart() {
 
     return (
 
-    <div className="relative mx-60 py-20 flex flex-row">
+    <div className="flex flex-row mx-60 py-20 relative">
         <div className="w-8/12 flex flex-col"> 
-                <h2 className="text-3xl text-candlelight-500 font-bold mb-4">Votre panier contient {meubles.length} articles</h2>
-                <div><ClearCartButton /></div>
+            <h2 className="text-3xl text-candlelight-500 font-bold ml-24">Votre panier contient {meubles.length} articles:</h2>
+        <div class="mt-2 ml-24"><ClearCartButton /></div>
+            
 
-            {meubles.map((meuble, index) => (
-            <div className="w-3/4 flex flex-col py-4" key={meuble.id}>
-                <h2 className="text-xl text-violet-400 font-bold mb-4">Article n°{index + 1}</h2>
-                <div className="justify-around items-center flex flex-row bg-white p-4 border-2 border-candlelight-500 rounded-md mb-4 shadow-lg h-48 ">
-                        <div className="w-1/5 h-4/6 rounded-full">
-                            <img src={meuble.photo_1} alt="Visuel principal du produit" />
+            {meubles.map((meuble, index) => ( 
+            <div className="w-3/4 flex flex-col p-4 ml-20" key={meuble.id}>
+                <h2 className="text-xl text-violet-400 font-bold mb-4 ml-2">Article n°{index + 1}</h2>
+                <div className="flex items-center bg-white p-2 border-2 border-candlelight-500 rounded-md mb-4 shadow-lg h-48 justify-between">
+                    <div className="flex flex-row ">
+                        <div className="w-1/5 h-4/6 rounded-lg overflow-hidden mx-4 mt-2 shadow-md hover:scale-110 transition duration-700 ease-in-out">
+                         <a href={`/product/${meuble.id}`}>
+                            <img className="rounded-lg shadow-md" src={meuble.photo_1} alt="visuel principal de l'article"></img>
+                         </a>
+                        </div>
+                        <div class = "flex flex-col ml-2">
+                            <p className="text-ms font-normal pt-4">{meuble.nom}</p>
+                            <div class = "flex flew-row ">
+                                <p className="mb-2 text-xs italic font-light">{meuble.type}</p>
+                            </div>
+                            <p class = "font-bold text-lg mt-7">{meuble.prix} <span className="font-normal">€TTC</span></p>
+                        </div>
+                    </div>
+                    <div>
+                        <img src={Croix} alt="supprimer" fill="white" className="w-10 h-10 p-3 bg-violet-400  hover:bg-violet-700 focus:outline-none hover:scale-110 transition duration-700 ease-in-out rounded-full border mr-10"/>
+                    </div>
 
-                        </div>
-                        <div class = "flex flex-col">
-                            <p className="font-bold mb-2">{meuble.nom}</p>
-                            <p className="mb-2">{meuble.type}</p>
-                            <p class = "font-bold">{meuble.prix}</p>
-                        </div>
-                        <div>
-                            <img src={Croix} alt="supprimer" className="w-10 h-10 p-3 bg-violet-400 rounded-full"/>
-                        </div>
                 </div>
             </div>
             ))}  
         </div>
 
-        <div className="relative">
-            <div className="bg-white rounded-md p-4 border-2 border-violet-400 shadow-lg sticky top-40 bottom-40 ">
-                <p className="text-violet-700 font-bold ml-4 mt-4 text-2xl text-center">Récapitulatif de commande</p>
-                <div className="flex flex-col m-8">
+
+        <div className=" relative">
+            <div className="bg-white rounded-md p-4 border-2 border-violet-400 shadow-lg sticky top-40 bottom-40">
+                <p className="font-bold mt-6 text-lg mx-16">Récapitulatif de commande</p>
+                <div className="flex flex-col mt-8 mb-32 justify-around mx-14">
+
                 {meubles.map((meuble, index) => (
                     <div className="flex justify-between">
-                        <p className="tracking-wide">Article n°{index + 1}</p>
-                        <p className="font-bold tracking-wide ml-28">{meuble.prix} $</p>
-                        <p className="font-bold tracking-wide">TTC</p>
+                        <p className="tracking-wide text-xs">Article n°{index + 1}</p>
+                        <div className="flex flex-row gap-3">
+                            <p className="font-extrabold tracking-wide ">{meuble.prix}</p>
+                            <p className="tracking-wide font-normal">€TTC</p>
+                        </div>
                     </div>
                     ))}
-                    <div class="content-none h-0.5 bg-black inset-y-0 mt-8 mb-8 ml-14 mr-14"/>
+                    <div class="content-none h-px bg-black inset-y-0 my-8 mx-10"></div>
                     <div className="flex justify-between">
-                        <p className="font-bold tracking-wide">Livraison</p>
-                        <p className="font-bold tracking-wide ml-28">{meubles.length * 10} $</p>
-                        <p className="font-bold tracking-wide">TTC</p>
-                    </div>
-                    <div class="content-none h-0.5 bg-black inset-y-0 mt-8 mb-8 ml-14 mr-14"/>
-                    <div className="text-violet-700 font-bold flex justify-between text-2xl">
-                        <p className=" tracking-wide">Total</p>
-                        <p className="tracking-wide ml-36">{total} $</p>
-                        <p className="tracking-wide">TTC</p>
+                        <p className="tracking-wide text-xs">Livraison</p>
+                        <div className="flex flex-row gap-3">
+                            <p className="font-extrabold tracking-wide ">{meubles.length * 10}</p>
+                            <p className="tracking-wide font-normal">€TTC</p>
+                        </div>
+                        </div>  
+
+                    <div class="content-none h-px bg-black inset-y-0 my-8 mx-10"/>
+                    <div className="flex justify-between">
+                        <p className="font-bold tracking-wide text-lg">Total</p>
+                        <div className="flex flex-row gap-3">
+                            <p className="font-extrabold tracking-wide ">{total}</p>
+                            <p className="tracking-wide font-normal">€TTC</p>
+                        </div>
+
                     </div>
                 </div>
             </div>
         </div>
     </div>
+   
     )   
 }
      
