@@ -41,15 +41,16 @@ function Article() {
                 <a href={`/product/${meuble.id}`}>
                      <img className="rounded-lg shadow-md border-2 border-candlelight-500 relative" src={meuble.photo_1} alt="visuel principal de l'article"></img>
                  </a>
-                 <div className='top-48 right-4 absolute hover:scale-110 transition duration-700 ease-in-out'>                 
-                      <BtnCart meubleId={meuble.id} />
-                 </div> 
                  
-                 <div className= "ml-3 mt-4">
+                 <div className= "ml-3 mt-4 ">
                      <p className="text-ms font-light">{meuble.nom}</p>
                      <p className="text-xs font-extralight italic">{meuble.type}</p>
                      <p className="text-lg font-bold">{meuble.prix}€</p>
                   </div>
+                  <div className='ml-40 hover:scale-110 transition duration-700 ease-in-out'>                 
+                      <BtnCart meubleId={meuble.id} />
+                 </div> 
+                
              </div>
            ))}
          </div>
