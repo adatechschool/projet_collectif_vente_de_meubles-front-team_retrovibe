@@ -78,28 +78,18 @@ function Product() {
             <div className="shadow-lg ml-14  pt-8 px-8 tracking-wider">
                 <div>
                     <h1 className="text-4xl pb-2 font-normal ">{meuble.nom}</h1>
-                    <div className="pb-10">
+                    <div className="pb-8">
                         <h1 className="text-4xl font-bold">{meuble.prix}<span className="text-xl font-normal"> €TCC</span></h1>
                     </div>
                 </div>   
-                <div className="text-lg space-y-1 italic font-light">
-                    <h1 className="font-medium not-italic">{meuble.type}</h1>
-                    {meuble.annee && <h1 className="font-medium not-italic">{meuble.annee}</h1>}
-                    <h1>couleur(s) :
-                        <ul className="font-medium not-italic">
-                            <li>{meuble.couleur_1}</li>
-                            {meuble.couleur_2 && <li>{meuble.couleur_2}</li>}
-                        </ul>
-                    <h1>matiere(s) : 
-                        <ul className="font-medium not-italic">
-                            <li>{meuble.matiere_1}</li>
-                            {meuble.matiere_2 && <li>{meuble.matiere_2}</li>}
-                        </ul>
-                    </h1>
-                    </h1> 
+                <div className="text-sm space-y-1 italic font-light">
+                    <h1 className="font-normal not-italic text-base">{meuble.type}</h1>
+                    {meuble.annee && <h1 className="font-normal not-italic">{meuble.annee}</h1>}
+                    <h1 className="font-normal not-italic"><span className="italic font-light">couleur(s)</span> : {meuble.couleur_1}, {meuble.couleur_2 && <span>{meuble.couleur_2}</span>}</h1>
+                    <h1 className="font-normal not-italic"><span className="italic font-light">matiere(s)</span> : {meuble.matiere_1}, {meuble.matiere_2 && <span>{meuble.matiere_2}</span>}</h1> 
                     <h1>dimensions : <span className="not-italic font-normal">{meuble.longueur} x {meuble.largeur} x {meuble.hauteur}</span></h1>
                 </div>
-                <div className="justify-end pt-36 pl-48">
+                <div className="justify-end pt-24 pl-48">
                 <BtnCart meubleId={meuble.id} />
                 </div>
             </div>
