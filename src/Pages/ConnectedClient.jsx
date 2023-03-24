@@ -1,6 +1,7 @@
 /* page 1 de la maquette */
 import axios from 'axios';
 import React from 'react';
+import LogOutButton from "../Composants/LogOutButton"
 
 function connectedClient(){
     axios.get("https://cors-anywhere.herokuapp.com/https://retrovibe.herokuapp.com/api/utilisateurs")
@@ -16,9 +17,8 @@ function connectedClient(){
         })
 
     return(
-    <div className="w-full pl-60 pr-60 text-center mt-20 h-screen">
-        <h2 className="font-bold">Mes recherches</h2>
-        <button type="submit" className="mt-10 shadow-md mb-6 text-white bg-violet-400 hover:bg-violet-700 focus:outline-none font-medium rounded-lg text-sm sm:w-auto px-5 py-2.5 text-center">🔎 chaise rouge</button>
+    <div className="px-60 mt-20 h-screen justify-center">
+        <LogOutButton/>
     </div>
     )};
 
