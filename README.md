@@ -69,3 +69,5 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 # projet_collectif_vente_de_meubles-front-team_retrovibe
+
+Pour communiquer avec la BDD depuis le LocalHost : https://cors-anywhere.herokuapp.com/corsdemo
