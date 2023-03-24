@@ -42,23 +42,23 @@ function Article() {
     // console.log(meubles)
 
      return (
-         <div className= "flex flex-wrap gap-3 mt-20 justify-center">
-           {meubles.map((meuble, index) => (
-             <div id="articleHome" className="w-1/5 rounded-lg border-4 border-candlelight-500 z-0 relative" key={index}>
+         <div className= "flex flex-wrap gap-x-16 gap-y-12 mt-24 justify-center">
+            {meubles.map((meuble, index) => (
+            <div id="articleHome" className="w-2/12 rounded-lg z-0 relative " key={index}>
 
                 {/* j'ajoute dans mon adresse mon id du meuble */}
-                 <a href={`/product/${meuble.id}`}>
-                     <img className="rounded-lg border-4  border-violet-400 border-solid transition-all duration-1000 hover:border-violet-700 hover:border-dotted" src={meuble.photo_1} alt="visuel principal de l'article"></img>
+                <a href={`/product/${meuble.id}`}>
+                     <img className="rounded-lg shadow-md border-2 border-candlelight-500 relative" src={meuble.photo_1} alt="visuel principal de l'article"></img>
                  </a>
-                 <div className='bottom-12 right-5'>                 
+                 <div className='top-48 right-4 absolute hover:scale-110 transition duration-700 ease-in-out'>                 
                       <BtnCart meubleId={meuble.id} />
                  </div> 
-                 <div className= "m-4">
-                     <h3>{meuble.nom}</h3>
-                     <p className="text-xs">{meuble.type}</p>
-                     <p className="text-xl">{meuble.prix}</p>
-
-                 </div>
+                 
+                 <div className= "ml-3 mt-4">
+                     <p className="text-ms font-light">{meuble.nom}</p>
+                     <p className="text-xs font-extralight italic">{meuble.type}</p>
+                     <p className="text-lg font-bold">{meuble.prix}€</p>
+                  </div>
              </div>
            ))}
          </div>
