@@ -9,7 +9,7 @@ import Connexion from "../Composants/Connexion";
 function Log() {
  
   return (  
-    <div className = "flex justify-center mt-32">
+    <div className = "flex justify-center my-48">
     <Connexion/>
     <div className= "content-none w-0.5 bg-violet-400 inset-y-0 ">
     </div>

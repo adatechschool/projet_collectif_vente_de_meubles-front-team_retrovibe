@@ -22,8 +22,8 @@ function Inscription (){
     <div>
       <form onSubmit={handleSubmit(onSubmit)} className = "ml-16 text-center">
         <h1 className="mt-6 mb-6 text-center">Pas encore client.e ?</h1>
-            <div className="mb-6 flex flex-row">
-              <div className="mr-4">
+            <div className="mb-6 flex flex-row justify-between">
+              <div >
                   <input defaultValue="" size="20" {...register("InputNom")}type="text" id="IputNom" className="bg-slate-100 border-2 border-violet-400 text-gray-900 text-sm rounded-lg focus:outline-none block p-2.5 hover:border-violet-700" placeholder="nom" required />
               </div>
               <div>
