@@ -44,13 +44,13 @@ function Article() {
      return (
          <div className= "flex flex-wrap gap-x-16 gap-y-12 mt-24 justify-center">
             {meubles.map((meuble, index) => (
-            <div id="articleHome" className="w-2/12 rounded-lg z-0 relative" key={index}>
+            <div id="articleHome" className="w-2/12 rounded-lg z-0 relative " key={index}>
 
                 {/* j'ajoute dans mon adresse mon id du meuble */}
                 <a href={`/product/${meuble.id}`}>
-                     <img className="rounded-lg shadow-lg relative" src={meuble.photo_1} alt="visuel principal de l'article"></img>
+                     <img className="rounded-lg shadow-md border-2 border-candlelight-500 relative" src={meuble.photo_1} alt="visuel principal de l'article"></img>
                  </a>
-                 <div className='top-48 right-4 absolute'>                 
+                 <div className='top-48 right-4 absolute hover:scale-110 transition duration-700 ease-in-out'>                 
                       <BtnCart meubleId={meuble.id} />
                  </div> 
                  
