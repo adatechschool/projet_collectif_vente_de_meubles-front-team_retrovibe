@@ -86,7 +86,7 @@ function Cart() {
                             <p className="font-extrabold tracking-wide ">{meubles.length * 10}</p>
                             <p className="tracking-wide font-normal">€TTC</p>
                         </div>
-                       
+                        </div>  
 
                     <div class="content-none h-px bg-black inset-y-0 my-8 mx-10"/>
                     <div className="flex justify-between">
@@ -101,6 +101,7 @@ function Cart() {
             </div>
         </div>
     </div>
+   
     )   
 }
      
