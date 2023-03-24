@@ -17,6 +17,7 @@ function Connexion (){
               console.log(response2.data)
               localStorage.setItem('Id_ConnectedUser',response2.data.id); // ajout de l'id de l'utilisateur connecter au localstorage 
               console.log(localStorage.getItem('Id_ConnectedUser'))
+              window.location.assign('http://localhost:3000/connectedclient')
             })
           break;
         } else {console.log("mail incorrect");}

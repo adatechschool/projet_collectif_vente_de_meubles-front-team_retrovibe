@@ -11,7 +11,7 @@ function LogOutButton() {
         localStorage.removeItem('Id_ConnectedUser');
         
         // je rafraichis ma page
-        window.location.reload(false);
+        window.location.assign('http://localhost:3000/home');
 
     }
         return (
