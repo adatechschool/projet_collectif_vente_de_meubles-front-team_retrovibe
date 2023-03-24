@@ -1,6 +1,5 @@
 import React from 'react';
 import axios from 'axios';
-import Auth from './Auth';
 import { useForm } from "react-hook-form";
 
 
@@ -10,7 +9,7 @@ function Inscription (){
         nom : data.InputNom,
         prenom : data.InputPrenom,
         email: data.InputEmail,
-        mot_de_passe: data.InputMotdePasse
+        mot_de_passe: data.InputMotdePasse  // Envoie d'une méthode post pour ajouter un utilisateur à la BDD pour s'inscrire 
     })
     .then(function (response){
       console.log(response);

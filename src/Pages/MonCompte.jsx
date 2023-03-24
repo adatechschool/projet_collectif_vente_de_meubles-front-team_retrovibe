@@ -7,7 +7,7 @@ import Log from "../Pages/Log";
 
 function SendtoRightPage() {
     const idValue = localStorage.getItem('Id_ConnectedUser')
-    console.log(idValue);
+    console.log(idValue); // Selon l'id de l'utilisateur 3 pages différentes peuvent se charger
     if ( idValue == 81) {
         return ( 
             <div>

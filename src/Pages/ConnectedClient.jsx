@@ -1,7 +1,5 @@
 /* page 1 de la maquette */
-
 import axios from 'axios';
-import { func } from 'prop-types';
 import React from 'react';
 
 function connectedClient(){
@@ -10,7 +8,7 @@ function connectedClient(){
             console.log(response.data);
             for (let i = 0; i < response.data.length; i++){
                 if (localStorage.getItem('Id_ConnectedUser') == response.data[i].id) {
-                    let salut = "Compte de " + response.data[i].prenom + " " + response.data[i].nom;
+                    let salut = "Compte de " + response.data[i].prenom + " " + response.data[i].nom; // on récupère le nom et prenom de l'utilisateur clien connecter
                     console.log(salut);
                     break;
                 }

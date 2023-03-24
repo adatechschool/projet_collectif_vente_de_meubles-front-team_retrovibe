@@ -1,12 +1,8 @@
+// https://cors-anywhere.herokuapp.com/corsdemo : pour communiquer avec la base de données depuis le localhost il faut activer l'essai demo sur ce lien a chaque fois 
+
 import React from 'react';
 import { useForm } from "react-hook-form";
-import Auth from './Auth';
 import axios from 'axios';
-
-
-// import { useState } from 'react';
-// const [isLoggedIn, setIsLoggedIn] = useState(false);
-// setIsLoggedIn(true);
 
 function Connexion (){
 
@@ -16,10 +12,10 @@ function Connexion (){
       console.log(response.data)
       for (let i=0; i<response.data.length; i++){
         if (response.data[i].email === data.email){
-          axios.get(`https://cors-anywhere.herokuapp.com/https://retrovibe.herokuapp.com/api/utilisateurs/${response.data[i].id}?email=${data.email}&mot_de_passe=${data.mot_de_passe}`)
+          axios.get(`https://cors-anywhere.herokuapp.com/https://retrovibe.herokuapp.com/api/utilisateurs/${response.data[i].id}?email=${data.email}&mot_de_passe=${data.mot_de_passe}`) // methode Get One pour verifier le mail et le mot de passe
             .then(function (response2){
               console.log(response2.data)
-              localStorage.setItem('Id_ConnectedUser',response2.data.id);
+              localStorage.setItem('Id_ConnectedUser',response2.data.id); // ajout de l'id de l'utilisateur connecter au localstorage 
               console.log(localStorage.getItem('Id_ConnectedUser'))
             })
           break;
@@ -27,8 +23,6 @@ function Connexion (){
       }
     })
 
-
-  
     return (
     <div>
       <form onSubmit={handleSubmit(onSubmit)} className = "mr-16 text-center">

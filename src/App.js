@@ -10,7 +10,6 @@ import ConnectedAdmin from './Pages/ConnectedAdmin';
 import Product from './Pages/Product';
 import About from './Pages/About';
 import Footer  from './Composants/Footer';
-import Test  from './Pages/Test';
 
 function App() {
   return (
@@ -25,7 +24,6 @@ function App() {
       <Route path='/connectedadmin' element={<ConnectedAdmin/>}/>
       <Route path='/product/:id' element={<Product/>}/>
       <Route path='/about' element={<About/>}/>
-      <Route path='/test' element={<Test/>}/>
     </Routes>
     <Footer/> 
     </>
