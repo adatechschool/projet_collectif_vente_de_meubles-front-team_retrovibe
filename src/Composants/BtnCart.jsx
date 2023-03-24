@@ -2,6 +2,7 @@ import React from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 
+// RECUPERER DANS LE LOCALSTORAGE L'ID DE CHAQUE MEUBLE CLIQUE
 
 /*Dans cet exemple, nous avons créé une fonction handleClick qui utilise la méthode setItem du localstorage 
 pour enregistrer une donnée dans le stockage local. 
@@ -12,22 +13,9 @@ Lorsque le bouton est cliqué, nous utilisons la méthode setItem du localstorag
 l'article dans le stockage local en utilisant JSON.stringify pour convertir l'objet en chaîne de caractères.*/
 
 
-// function BtnCart(props) {
-//   const handleClick = () => {
-//     localStorage.setItem("cart", props.meubleId);
-//     console.log("localstorage", localStorage.getItem("cart"));
-//   }
-
-//   return(
-//     <button onClick={handleClick} className="mb-6 text-white bg-violet-400 transition-all duration-1000 hover:bg-violet-700 focus:outline-none font-medium rounded-lg text-sm sm:w-auto m-auto px-5 py-2.5 text-center my-2" alt="bouton du caddie">
-//       <FontAwesomeIcon icon={faCartShopping} />
-//     </button>
-//   )
-// }
-
 function BtnCart(props) {
-    const handleClick = () => {
-      // Récupérer les éléments du panier depuis le local storage
+      const handleClick = () => {
+      // Récupérer les éléments du panier (un tableau avec l'ID de l'article) depuis le local storage 
       const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
   
       // Ajouter le nouvel élément à la liste
@@ -35,9 +23,10 @@ function BtnCart(props) {
   
       // Stocker la nouvelle liste dans le local storage
       localStorage.setItem('cart', JSON.stringify(cartItems));
-  
+
       // Afficher la liste des éléments du panier dans la console
       console.log('localstorage', localStorage.getItem('cart'));
+
     };
   
     return (
@@ -50,7 +39,6 @@ function BtnCart(props) {
       </button>
     );
   }
-
 
 
 export default BtnCart;

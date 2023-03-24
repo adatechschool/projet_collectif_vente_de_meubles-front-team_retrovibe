@@ -8,8 +8,6 @@ import axios from 'axios';
 
 function Product() {
 
-
-    
      const [meuble, setMeuble] = useState({});
      const [currentImage, setCurrentImage] = useState(meuble.photo_1);
      const [currentPhoto, setCurrentPhoto] = useState(meuble.photo_2);
@@ -79,17 +77,27 @@ function Product() {
             {/* DIV INFOS */}
             <div className="shadow-lg ml-14  pt-8 px-8 tracking-wider">
                 <div>
-                    <h1 className="text-xl pb-2 font-normal ">{meuble.nom}</h1>
+                    <h1 className="text-4xl pb-2 font-normal ">{meuble.nom}</h1>
                     <div className="pb-10">
                         <h1 className="text-4xl font-bold">{meuble.prix}<span className="text-xl font-normal"> €TCC</span></h1>
                     </div>
-                </div>
-                <div className="text-xs space-y-1 italic font-light tracking-wider lowercase ">
-                    <h1>type : <span className="not-italic font-normal">{meuble.type}</span></h1>
-                    <h1>année : <span className="not-italic font-normal">{meuble.annee}</span></h1>
-                    <h1>couleur(s) : <span className="not-italic font-normal">{meuble.couleur_1}, {meuble.couleur_2}</span></h1>
+                </div>   
+                <div className="text-lg space-y-1 italic font-light">
+                    <h1 className="font-medium not-italic">{meuble.type}</h1>
+                    {meuble.annee && <h1 className="font-medium not-italic">{meuble.annee}</h1>}
+                    <h1>couleur(s) :
+                        <ul className="font-medium not-italic">
+                            <li>{meuble.couleur_1}</li>
+                            {meuble.couleur_2 && <li>{meuble.couleur_2}</li>}
+                        </ul>
+                    <h1>matiere(s) : 
+                        <ul className="font-medium not-italic">
+                            <li>{meuble.matiere_1}</li>
+                            {meuble.matiere_2 && <li>{meuble.matiere_2}</li>}
+                        </ul>
+                    </h1>
+                    </h1> 
                     <h1>dimensions : <span className="not-italic font-normal">{meuble.longueur} x {meuble.largeur} x {meuble.hauteur}</span></h1>
-                    <h1>matière(s) : <span className="not-italic font-normal">{meuble.matiere_1}, {meuble.matiere_2}</span></h1>
                 </div>
                 <div className="justify-end pt-36 pl-48">
                 <BtnCart meubleId={meuble.id} />
