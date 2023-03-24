@@ -3,7 +3,6 @@ import React, {useEffect, useState} from "react";
 import axios from 'axios';
 import ClearCartButton from '../Composants/ClearCartButton';
 import ClearCartButtonByOne from '../Composants/ClearCartButtonByOne';
-import Croix from "./croix_supp.png";
 
 
 
@@ -55,14 +54,14 @@ function Cart() {
             <div className="w-3/4 flex flex-col p-4 ml-20" key={meuble.id} id={meuble.id}>
                 <h2 className="text-xl text-violet-400 font-bold mb-4 ml-2">Article n°{index + 1}</h2>
                 <div className="flex items-center bg-white p-2 border-2 border-candlelight-500 rounded-md mb-4 shadow-lg h-48 justify-between">
-                    <div className="flex flex-row ">
-                        <div className="w-1/5 h-4/6 rounded-lg overflow-hidden mx-4 mt-2 shadow-md hover:scale-110 transition duration-700 ease-in-out">
+                    <div className="flex flex-row justify-evenly items-center">
+                        <div className="w-1/5 h-4/6 rounded-lg overflow-hidden shadow-md hover:scale-110 transition duration-700 ease-in-out">
                          <a href={`/product/${meuble.id}`}>
                             <img className="rounded-lg shadow-md" src={meuble.photo_1} alt="visuel principal de l'article"></img>
                          </a>
                         </div>
-                        <div class = "flex flex-col ml-2">
-                            <p className="text-ms font-normal pt-4">{meuble.nom}</p>
+                        <div class = "flex flex-col">
+                            <p className="text-ms font-normal">{meuble.nom}</p>
                             <div class = "flex flew-row ">
                                 <p className="mb-2 text-xs italic font-light">{meuble.type}</p>
                             </div>
@@ -72,9 +71,6 @@ function Cart() {
                                     <ClearCartButtonByOne indexMeuble={index}/>
                                 </div>
                     </div>
-                    <div>
-                        <img src={Croix} alt="supprimer" fill="white" className="w-10 h-10 p-3 bg-violet-400  hover:bg-violet-700 focus:outline-none hover:scale-110 transition duration-700 ease-in-out rounded-full border mr-10"/>
-                    </div>
 
                 </div>
             </div>
@@ -83,9 +79,9 @@ function Cart() {
 
 
         <div className=" relative">
-            <div className="bg-white rounded-md p-4 border-2 border-violet-400 shadow-lg sticky top-40 bottom-40">
+            <div className="bg-white rounded-md p-4 border-2 border-violet-400 shadow-lg sticky top-40 bottom-48">
                 <p className="font-bold mt-6 text-lg mx-16">Récapitulatif de commande</p>
-                <div className="flex flex-col mt-8 mb-32 justify-around mx-14">
+                <div className="flex flex-col my-8 justify-around mx-14">
 
                 {meubles.map((meuble, index) => (
                     <div className="flex justify-between">
