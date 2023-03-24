@@ -1,5 +1,4 @@
 /* page 6 de la maquette */
-
 import React from 'react';
 
 function connectedAdmin(){
