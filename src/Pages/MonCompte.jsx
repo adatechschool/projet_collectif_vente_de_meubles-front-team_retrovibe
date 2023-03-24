@@ -1,18 +1,32 @@
-import React from "react";
+import React from 'react';
+import { useParams } from 'react-router-dom';
+import ConnectedClient from "../Pages/ConnectedClient";
+import ConnectedAdmin from "../Pages/ConnectedAdmin";
+import Log from "../Pages/Log";
 
-function test2() {
 
-    // var idValue = localStorage.getItem('id')
-
-    return (
-        
-    <div>
-        <p>Ici on va seulement router vers Connexion ou Connected admin ou Connected client</p>
-        {/* <p>{idValue}</p> */}
-    </div>
-    )
+function SendtoRightPage() {
+    const idValue = localStorage.getItem('Id_ConnectedUser')
+    console.log(idValue);
+    if ( idValue == 81) {
+        return ( 
+            <div>
+                <ConnectedAdmin/>
+            </div>
+        )   
+    } else if (idValue == null) {
+        return ( 
+            <div>
+                <Log/>
+            </div>
+        )   
+    } else {
+        return (
+            <div>
+                <ConnectedClient/>
+            </div> 
+        )
+    }
 }
 
-
-
-export default test2;
+export default SendtoRightPage;

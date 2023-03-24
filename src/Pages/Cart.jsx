@@ -30,6 +30,7 @@ function Cart() {
 
 
     return (
+
     <div className="flex flex-row mx-60 py-20 relative">
         <div className="w-8/12 flex flex-col"> 
             <h2 className="text-3xl text-candlelight-500 font-bold ml-24">Votre panier contient {meubles.length} articles:</h2>
@@ -57,15 +58,18 @@ function Cart() {
                     <div>
                         <img src={Croix} alt="supprimer" fill="white" className="w-10 h-10 p-3 bg-violet-400  hover:bg-violet-700 focus:outline-none hover:scale-110 transition duration-700 ease-in-out rounded-full border mr-10"/>
                     </div>
+
                 </div>
             </div>
             ))}  
         </div>
 
+
         <div className=" relative">
             <div className="bg-white rounded-md p-4 border-2 border-violet-400 shadow-lg sticky top-40 bottom-40">
                 <p className="font-bold mt-6 text-lg mx-16">Récapitulatif de commande</p>
                 <div className="flex flex-col mt-8 mb-32 justify-around mx-14">
+
                 {meubles.map((meuble, index) => (
                     <div className="flex justify-between">
                         <p className="tracking-wide text-xs">Article n°{index + 1}</p>
@@ -83,7 +87,7 @@ function Cart() {
                             <p className="tracking-wide font-normal">€TTC</p>
                         </div>
                        
-                    </div>
+
                     <div class="content-none h-px bg-black inset-y-0 my-8 mx-10"/>
                     <div className="flex justify-between">
                         <p className="font-bold tracking-wide text-lg">Total</p>
@@ -91,6 +95,7 @@ function Cart() {
                             <p className="font-extrabold tracking-wide ">{total}</p>
                             <p className="tracking-wide font-normal">€TTC</p>
                         </div>
+
                     </div>
                 </div>
             </div>
