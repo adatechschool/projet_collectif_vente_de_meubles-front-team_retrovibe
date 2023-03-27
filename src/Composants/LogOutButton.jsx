@@ -1,7 +1,11 @@
-import React from 'react';
+import React from "react";
+import { useNavigate } from "react-router-dom";
 
 
 function LogOutButton() {
+
+    const navigate = useNavigate();
+
     const clearStorageId = () => {
 
         // Récupérer les éléments du panier (un tableau avec l'ID de l'article) depuis le local storage 
@@ -9,9 +13,7 @@ function LogOutButton() {
 
         // Stocker la nouvelle liste dans le local storage
         localStorage.removeItem('Id_ConnectedUser');
-        
-        // je rafraichis ma page
-        window.location.assign('https://retrovibes.herokuapp.com/home');
+        navigate('/home')
 
     }
         return (
