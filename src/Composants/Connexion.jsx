@@ -3,8 +3,12 @@
 import React from 'react';
 import { useForm } from "react-hook-form";
 import axios from 'axios';
+// import du useNavigate qui permet d'aller vers la bonne route quel que soit le serveur (localhost ou heroku)
+import { useNavigate } from "react-router-dom";
 
 function Connexion (){
+    // j'utilise le hook useNavigate pour changer de page au oneSubmit
+    const navigate = useNavigate();
 
     const { register, handleSubmit, watch, formState: { error } } = useForm();
     const onSubmit = data => axios.get("https://cors-anywhere.herokuapp.com/https://retrovibe.herokuapp.com/api/utilisateurs")
@@ -17,7 +21,10 @@ function Connexion (){
               console.log(response2.data)
               localStorage.setItem('Id_ConnectedUser',response2.data.id); // ajout de l'id de l'utilisateur connecter au localstorage 
               console.log(localStorage.getItem('Id_ConnectedUser'))
-              window.location.assign('http://localhost:3000/connectedclient')
+
+              // window.location.assign('http://localhost:3000/connectedclient')
+              // j'appelle ici mon useNavigate() avec la route souhaitée plutôt que d'utiliser window.location.assign
+              navigate('/connectedclient')
             })
           break;
         } else {console.log("mail incorrect");}
