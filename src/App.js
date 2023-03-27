@@ -10,12 +10,15 @@ import ConnectedAdmin from './Pages/ConnectedAdmin';
 import Product from './Pages/Product';
 import About from './Pages/About';
 import Footer  from './Composants/Footer';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 function App() {
   return (
     <>
     <Header/> 
+    <ToastContainer/>    
     <Routes>
       <Route path='/home' element={<Home/>}/>
       <Route path='/log' element={<Log/>}/>

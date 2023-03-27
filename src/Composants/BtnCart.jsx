@@ -1,6 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
+import { toast } from 'react-toastify';
 
 // RECUPERER DANS LE LOCALSTORAGE L'ID DE CHAQUE MEUBLE CLIQUE
 
@@ -27,16 +28,31 @@ function BtnCart(props) {
       // Afficher la liste des éléments du panier dans la console
       console.log('localstorage', localStorage.getItem('cart'));
 
+      toast.success('🦄 Ajouté au panier !', {
+        position: "top-center",
+        autoClose: 1500,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+        });
+
+      
+
     };
   
     return (
       <button
         onClick={handleClick}
-        className="mb-6 text-white bg-violet-400 transition-all duration-1000 hover:bg-violet-700 focus:outline-none font-medium rounded-lg text-sm sm:w-auto m-auto px-5 py-2.5 text-center my-2"
+        className="flex justify-center items-center text-white bg-violet-400 transition-all duration-1000 hover:bg-violet-700 focus:outline-none font-medium rounded-lg text-sm w-full mx-auto mb-6 mt-2 px-5 py-2.5"
         alt="bouton du caddie"
       >
-        <FontAwesomeIcon icon={faCartShopping} style={{color: "#FFD91A",}}/>
+        {props.meublePrix ? props.meublePrix + "€" : "Acheter"} 
+        <FontAwesomeIcon icon={faCartShopping} style={{color: "#FFD91A",}} className="mx-2"/>
       </button>
+      
     );
   }
 
