@@ -7,17 +7,17 @@ import axios from 'axios';
 function Connexion (){
 
     const { register, handleSubmit, watch, formState: { error } } = useForm();
-    const onSubmit = data => axios.get("https://cors-anywhere.herokuapp.com/https://retrovibe.herokuapp.com/api/utilisateurs")
+    const onSubmit = data => axios.get("https://retrovibe.herokuapp.com/api/utilisateurs")
     .then(function (response){
       console.log(response.data)
       for (let i=0; i<response.data.length; i++){
         if (response.data[i].email === data.email){
-          axios.get(`https://cors-anywhere.herokuapp.com/https://retrovibe.herokuapp.com/api/utilisateurs/${response.data[i].id}?email=${data.email}&mot_de_passe=${data.mot_de_passe}`) // methode Get One pour verifier le mail et le mot de passe
+          axios.get(`https://retrovibe.herokuapp.com/api/utilisateurs/${response.data[i].id}?email=${data.email}&mot_de_passe=${data.mot_de_passe}`) // methode Get One pour verifier le mail et le mot de passe
             .then(function (response2){
               console.log(response2.data)
               localStorage.setItem('Id_ConnectedUser',response2.data.id); // ajout de l'id de l'utilisateur connecter au localstorage 
               console.log(localStorage.getItem('Id_ConnectedUser'))
-              window.location.assign('http://localhost:3000/connectedclient')
+              window.location.assign('http://retrovibes.herokuapp.com/connectedclient')
             })
           break;
         } else {console.log("mail incorrect");}
