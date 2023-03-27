@@ -19,8 +19,8 @@ function Inscription (){
     });
 
     return (
-    <div>
-      <form onSubmit={handleSubmit(onSubmit)} className = "ml-16 text-center">
+    <div className='m-auto md:m-0'>
+      <form onSubmit={handleSubmit(onSubmit)} className = "md:ml-16 text-center">
         <h1 className="mt-6 mb-6 text-center">Pas encore client.e ?</h1>
             <div className="mb-6 flex flex-row justify-between">
               <div >

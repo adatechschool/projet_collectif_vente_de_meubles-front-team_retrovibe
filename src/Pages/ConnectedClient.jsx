@@ -8,7 +8,7 @@ function connectedClient(){
         .then(function(response) {
             console.log(response.data);
             for (let i = 0; i < response.data.length; i++){
-                if (localStorage.getItem('Id_ConnectedUser') == response.data[i].id) {
+                if (localStorage.getItem('Id_ConnectedUser') === response.data[i].id) {
                     let salut = "Compte de " + response.data[i].prenom + " " + response.data[i].nom; // on récupère le nom et prenom de l'utilisateur clien connecter
                     console.log(salut);
                     break;

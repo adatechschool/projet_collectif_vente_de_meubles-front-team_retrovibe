@@ -33,7 +33,7 @@ function Connexion (){
 
     return (
     <div>
-      <form onSubmit={handleSubmit(onSubmit)} className = "mr-16 text-center">
+      <form onSubmit={handleSubmit(onSubmit)} className = "md:mr-16 text-center">
         <h1 className="mt-6 mb-6 text-center">Déjà client.e ?</h1>
         <div className="mb-6 flex flex-row">
           <div>
