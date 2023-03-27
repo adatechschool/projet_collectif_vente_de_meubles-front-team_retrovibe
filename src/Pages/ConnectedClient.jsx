@@ -4,7 +4,7 @@ import React from 'react';
 import LogOutButton from "../Composants/LogOutButton"
 
 function connectedClient(){
-    axios.get("https://cors-anywhere.herokuapp.com/https://retrovibe.herokuapp.com/api/utilisateurs")
+    axios.get("https:retrovibe.herokuapp.com/api/utilisateurs")
         .then(function(response) {
             console.log(response.data);
             for (let i = 0; i < response.data.length; i++){
