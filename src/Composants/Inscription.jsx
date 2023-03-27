@@ -5,7 +5,7 @@ import { useForm } from "react-hook-form";
 
 function Inscription (){
     const { register, handleSubmit, watch, formState: { error } } = useForm();
-    const onSubmit = data => axios.post("https://cors-anywhere.herokuapp.com/https://retrovibe.herokuapp.com/api/utilisateurs", {
+    const onSubmit = data => axios.post("https://retrovibe.herokuapp.com/api/utilisateurs", {
         nom : data.InputNom,
         prenom : data.InputPrenom,
         email: data.InputEmail,
