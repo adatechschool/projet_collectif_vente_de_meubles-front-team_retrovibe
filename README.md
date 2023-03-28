@@ -1,73 +1,33 @@
-# Getting Started with Create React App
+# RETROVIBE : https://retrovibes.herokuapp.com/home
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Ceci est le repo de notre Front, le Back se trouve ici : https://github.com/adatechschool/projet_collectif_vente_de_meubles_back-team_retrovibe
 
-## Available Scripts
+### Contexte
 
-In the project directory, you can run:
+Projet de **Jeremy Zynger, Pierre Merlaud, Isabelle Yi, Léon Yi, Helder Ferreira, Sandy Dambreville, Johan Anquetil** et **Nolwen Major Francès** dans le cadre de notre formation à **ADA Tech School**.
 
-### `npm start`
+### Cahier des charges
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+“Lauréline Fleury a lancé son entreprise “Anciens meubles pour une nouvelle vie”, de vente de meubles de seconde main. Pour gagner en visibilité, elle a besoin d’avoir un site internet pour afficher ses produits. En plus, cela lui permettra de gérer son stock.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Son besoin est donc le suivant :
 
-### `npm test`
+J’ai besoin d’avoir une page principale qui regroupera les meubles en vente en ce moment. Pour l’affichage de chaque meuble, je souhaite un encart dans lequel on pourra retrouver une photo, le type de meuble, le prix et un bouton pour l’acheter. Chaque encart sera cliquable pour permettre d’accéder au détail du produit. Sur cette nouvelle page, on retrouvera une série de photos du meuble et toutes les informations nécessaires, c’est-à-dire, le type, le prix, les dimensions, les couleurs, les matières et bien sûr un bouton pour acheter.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Pour ce qui est de l’administration, je souhaite une page de connexion. Lorsque je suis connectée je dois pouvoir accéder à une page de gestion des produits. Sur celle-ci je veux pouvoir avoir la liste de mes meubles. Je souhaite pouvoir modifier les informations de mes produits en ayant un bouton depuis ma liste. Je dois pouvoir également les supprimer s’ils ont été vendus en magasin.”
 
-### `npm run build`
+- Langage : libre et soumis au vote des équipes, utilisation d’un framework pour le back
+- Équipes : imposées (le groupe se sépare en deux équipes, une qui commencera par travailler sur le front-end et l’autre sur le back-end, puis les deux équipes inverseront à la fin de la première semaine)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Images
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+![Screenshot-Retrovibe-Produit.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/48e9179b-12b5-47b6-84e6-1b70100e990d/Screenshot-Retrovibe-Produit.png)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![Screenshot-Retrovibe-Panier.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/f5d6d4bd-fdc1-405f-9368-3ed5f041c68d/Screenshot-Retrovibe-Panier.png)
 
-### `npm run eject`
+![Screenshot-Retrovibe-Home.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/20f49c10-675b-4e81-b30d-af758de4a7d7/Screenshot-Retrovibe-Home.png)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+![Screenshot-Retrovibe-MonCompte.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/676ee0f0-0225-45fa-ac39-a129bc453bec/Screenshot-Retrovibe-MonCompte.png)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Maquette
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# projet_collectif_vente_de_meubles-front-team_retrovibe
-
-Pour communiquer avec la BDD depuis le LocalHost : https://cors-anywhere.herokuapp.com/corsdemo
