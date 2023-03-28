@@ -1,4 +1,4 @@
-# RETROVIBE : https://retrovibes.herokuapp.com/home
+# ![RETROVIBE](https://retrovibes.herokuapp.com/home)
 
 Ceci est le repo de notre Front, le Back se trouve ici : https://github.com/adatechschool/projet_collectif_vente_de_meubles_back-team_retrovibe
 
@@ -20,14 +20,6 @@ Pour ce qui est de l’administration, je souhaite une page de connexion. Lorsqu
 - Équipes : imposées (le groupe se sépare en deux équipes, une qui commencera par travailler sur le front-end et l’autre sur le back-end, puis les deux équipes inverseront à la fin de la première semaine)
 
 ### Images
-
-![Screenshot-Retrovibe-Produit.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/48e9179b-12b5-47b6-84e6-1b70100e990d/Screenshot-Retrovibe-Produit.png)
-
-![Screenshot-Retrovibe-Panier.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/f5d6d4bd-fdc1-405f-9368-3ed5f041c68d/Screenshot-Retrovibe-Panier.png)
-
-![Screenshot-Retrovibe-Home.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/20f49c10-675b-4e81-b30d-af758de4a7d7/Screenshot-Retrovibe-Home.png)
-
-![Screenshot-Retrovibe-MonCompte.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/676ee0f0-0225-45fa-ac39-a129bc453bec/Screenshot-Retrovibe-MonCompte.png)
 
 ### Maquette
 
