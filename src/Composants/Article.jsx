@@ -33,7 +33,7 @@ function Article() {
 
 
      return (
-         <div className= "flex flex-wrap gap-x-16 gap-y-12 mt-24 justify-center">
+         <div className= "flex flex-wrap gap-x-16 gap-y-12 ">
           
             {meubles.map((meuble, index) => (
             <div id="articleHome" className="w-2/12 rounded-lg z-0 relative " key={index}>
@@ -49,7 +49,6 @@ function Article() {
                   </div>
                   <div className='flex justify-center hover:scale-110 transition duration-700 ease-in-out'>
                       <BtnCart meubleId={meuble.id} meublePrix={meuble.prix} />
-
                  </div> 
                 
              </div>
