@@ -12,9 +12,6 @@ function Product() {
      const [currentImage, setCurrentImage] = useState(meuble.photo_1);
      const [currentPhoto, setCurrentPhoto] = useState(meuble.photo_2);
 
-
-     
-
     // je recupère mon id du meuble dans l'adresse de mon navigateur avec useParams
      const { id } = useParams();
 
@@ -34,8 +31,9 @@ function Product() {
 
     return (
 
-        // PHOTO PRINCIPALE
-        <div className="flex flex-row justify-center mt-28 gap-7 mb-44">
+        // DIV GENERALE
+        <div className="sm:px-20 sm:py-10 p-5 flex sm:flex-row flex-col sm:justify-center bg-violet-100">
+            {/* DIV PHOTO PRINCIPALE*/}
             <div className="">
                 <img className="w-full rounded-lg cursor-pointer object-fill border-2 border-candlelight-500"
                     onClick={() => setCurrentImage(meuble.photo_1)||setCurrentPhoto(meuble.photo_2)}
@@ -43,7 +41,7 @@ function Product() {
             </div>
 
             {/* DIV PHOTOS */}
-            <div className="flex flex-col justify-start gap-6  ">
+            <div className="flex sm:flex-col flex-row py-2 gap-2 sm:ml-6">
                     {meuble.photo_2 && (
                 <div onClick={() => setCurrentImage(meuble.photo_2) || setCurrentPhoto(meuble.photo_1)}>
                     <img className="w-24 rounded-lg border-2 border-candlelight-500 cursor-pointer hover:scale-110 transition duration-700 ease-in-out "
@@ -75,12 +73,10 @@ function Product() {
             </div>
 
             {/* DIV INFOS */}
-            <div className="shadow-lg ml-14  pt-8 px-8 tracking-wider">
+            <div className="flex flex-col shadow-lg p-8 tracking-wider bg-white sm:ml-12 place-content-between">
                 <div>
-                    <h1 className="text-4xl pb-2 font-normal ">{meuble.nom}</h1>
-                    <div className="pb-8">
-                        <h1 className="text-4xl font-bold">{meuble.prix}<span className="text-xl font-normal"> €TCC</span></h1>
-                    </div>
+                <div>
+                    <h1 className="text-2xl pb-6 font-bold ">{meuble.nom}</h1>
                 </div>   
                 <div className="text-sm space-y-1 italic font-light">
                     <h1 className="font-normal not-italic text-base">{meuble.type}</h1>
@@ -89,8 +85,9 @@ function Product() {
                     <h1 className="font-normal not-italic"><span className="italic font-light">matiere(s)</span> : {meuble.matiere_1}, {meuble.matiere_2 && <span>{meuble.matiere_2}</span>}</h1> 
                     <h1>dimensions : <span className="not-italic font-normal">{meuble.longueur} x {meuble.largeur} x {meuble.hauteur}</span></h1>
                 </div>
-                <div className="justify-end pt-24 pl-48">
-                <BtnCart meubleId={meuble.id} />
+                </div>
+                <div className="pt-6">
+                    <BtnCart meubleId={meuble.id} meublePrix={meuble.prix}/>
                 </div>
             </div>
         </div>

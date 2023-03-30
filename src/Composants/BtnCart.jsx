@@ -46,7 +46,7 @@ function BtnCart(props) {
     return (
       <button
         onClick={handleClick}
-        className="flex justify-center items-center text-white bg-violet-400 transition-all duration-1000 hover:bg-violet-700 focus:outline-none font-medium rounded-lg text-sm w-full mx-auto mb-6 mt-2 px-5 py-2.5"
+        className="flex justify-center items-center text-white bg-violet-400 transition-all duration-1000 hover:bg-violet-700 focus:outline-none font-medium rounded-lg text-sm w-full px-5 py-2.5"
         alt="bouton du caddie"
       >
         {props.meublePrix ? props.meublePrix + "€" : "Acheter"} 
