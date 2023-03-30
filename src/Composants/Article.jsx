@@ -33,27 +33,27 @@ function Article() {
 
 
      return (
-         <div className= "flex flex-wrap gap-x-16 gap-y-12 ">
+      <div className="">
+         <div className= "sm:mx-40 flex flex-col sm:flex-row sm:flex-wrap justify-between ">
           
             {meubles.map((meuble, index) => (
-            <div id="articleHome" className="w-2/12 rounded-lg z-0 relative " key={index}>
+            <div id="articleHome" className="grow rounded-lg m-8 sm:mx-4 sm:my-8 sm:w-[30%] sm:min-w-[300px] sm:max-w-[30%]" key={index}>
 
                 {/* j'ajoute dans mon adresse mon id du meuble */}
                 <a href={`/product/${meuble.id}`}>
-                     <img className="rounded-lg shadow-md border-2 border-candlelight-500 relative" src={meuble.photo_1} alt="visuel principal de l'article"></img>
+                     <img className="w-full rounded-lg shadow-md border-2 border-candlelight-500" src={meuble.photo_1} alt="visuel principal de l'article"></img>
                  </a>
-                 
-                 <div className= "ml-3 mt-4 ">
+                 <div className= "w-full m-4">
                      <p className="text-ms font-light">{meuble.nom}</p>
                      <p className="text-xs font-extralight italic">{meuble.type}</p>
                   </div>
-                  <div className='flex justify-center hover:scale-110 transition duration-700 ease-in-out'>
+                  <div className='w-full hover:scale-110 transition duration-700 ease-in-out '>
                       <BtnCart meubleId={meuble.id} meublePrix={meuble.prix} />
                  </div> 
-                
-             </div>
+            </div>
            ))}
          </div>
+        </div>
        );
      }
 
