@@ -21,9 +21,10 @@ function Connexion (){
               console.log(response2.data)
               localStorage.setItem('Id_ConnectedUser',response2.data.id); // ajout de l'id de l'utilisateur connecter au localstorage 
               console.log(localStorage.getItem('Id_ConnectedUser'))
-              window.location.assign('http://retrovibes.herokuapp.com/connectedclient')
+              // window.location.assign('http://retrovibes.herokuapp.com/connectedclient')
               // j'appelle ici mon useNavigate() avec la route souhaitée plutôt que d'utiliser window.location.assign
-              navigate('/connectedclient')
+              navigate('/home')
+              window.location.reload(false)
             })
           break;
         } else {console.log("mail incorrect");}

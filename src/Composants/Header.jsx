@@ -2,6 +2,7 @@ import React from 'react';
 import logo from './logo-retrovibe.png';
 import CartButtonPage from './CartButtonPage';
 import Searchbar from './Searchbar';
+import LogOutButton from './LogOutButton';
 /* sm:w-auto */
 
 function Header() {
@@ -18,10 +19,12 @@ function Header() {
             </div>
             <div>
                 <div className='flex font-medium text-sm text-center'> 
-                    <a href="/MonCompte">
-                        <button type="submit" className="sm:w-32 sm:h-12 sm:m-2 w-24 h-7 m-1 text-white bg-violet-400 transition-all duration-500 hover:bg-violet-700 rounded-lg">Mon Compte</button>
-                    </a>
-                    <CartButtonPage/>
+                {localStorage.getItem('Id_ConnectedUser') 
+                ? <LogOutButton/> 
+                : <a href="/MonCompte">
+                    <button type="submit" className="sm:w-32 sm:h-12 sm:m-2 w-24 h-7 m-1 text-white bg-violet-400 transition-all duration-500 hover:bg-violet-700 rounded-lg focus:outline-none hover:scale-110 ease-in-out">Mon Compte</button>
+                  </a> }
+                <CartButtonPage/>
                 </div>
             </div>
         </div>

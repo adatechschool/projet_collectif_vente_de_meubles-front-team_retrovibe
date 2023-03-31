@@ -14,10 +14,11 @@ function LogOutButton() {
         // Stocker la nouvelle liste dans le local storage
         localStorage.removeItem('Id_ConnectedUser');
         navigate('/home')
+        window.location.reload(false)
 
     }
         return (
-            <button onClick={clearStorageId} alt="bouton log out" className='w-20 mb-4 text-white bg-violet-700 hover:bg-violet-400 font-medium rounded-lg text-sm sm:w-auto px-5 py-2.5 text-center focus:outline-none hover:scale-110 transition duration-700 ease-in-out'> Déconnexion
+            <button onClick={clearStorageId} alt="bouton log out" className='sm:w-32 sm:h-12 sm:m-2 w-24 h-7 m-1 text-white bg-violet-400 transition-all duration-500 hover:bg-violet-700 rounded-lg focus:outline-none hover:scale-110 ease-in-out'> Déconnexion
             </button>
           );
         
