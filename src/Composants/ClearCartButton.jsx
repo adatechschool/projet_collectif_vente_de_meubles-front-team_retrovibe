@@ -29,7 +29,8 @@ function ClearCartButton() {
 
     }
         return (
-            <button onClick={clearStorage} className="font-bold tracking-wide mb-6 mr-10 text-white bg-violet-400 transition-all duration-1000 hover:bg-violet-700 focus:outline-none rounded-lg text-center" alt="bouton du caddie">
+            <button onClick={clearStorage} className="font-bold tracking-wide text-white bg-violet-400 transition-all duration-1000 hover:bg-violet-700 focus:outline-none rounded-lg text-center sm:my-6 sm:mr-10 sm:px-5 sm:py-2.5" alt="bouton du caddie">
+                                           {/* className="font-bold tracking-wide mb-6 mr-10 text-white bg-violet-400 transition-all duration-1000 hover:bg-violet-700 focus:outline-none rounded-lg text-center" alt="bouton du caddie" */}
                 Vider mon panier <FontAwesomeIcon icon={faBasketShopping} style={{color: "#FFD91A",}} />
             </button>
         
