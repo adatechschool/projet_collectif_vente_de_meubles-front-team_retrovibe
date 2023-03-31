@@ -52,7 +52,6 @@ function Cart() {
             {meubles.length >= 1 && <div className="my-4 sm:ml-4"><ClearCartButton /></div>}
         {/* <div class="mt-2 ml-24"><ClearCartButton /></div> */}
             
-
             {meubles.map((meuble, index) => (
             <div className="w-full flex flex-col" key={meuble.id} id={meuble.id}>
             {/* <div className="w-3/4 flex flex-col p-4" key={meuble.id} id={meuble.id}> */}
@@ -60,7 +59,6 @@ function Cart() {
                 <div className="flex items-center bg-white p-2 border-2 border-candlelight-500 rounded-md mb-4 shadow-lg sm:h-48 justify-between">
                     <div className="flex flex-row justify-evenly items-center">
                         <div className="w-1/4 mr-1 rounded-lg overflow-hidden shadow-md hover:scale-110 transition duration-700 ease-in-out sm:w-1/5">
-                        {/* <div className="w-1/5 h-4/6 rounded-lg overflow-hidden shadow-md hover:scale-110 transition duration-700 ease-in-out"> */}
                          <a href={`/product/${meuble.id}`}>
                             <img className="rounded-lg shadow-md" src={meuble.photo_1} alt="visuel principal de l'article"></img>
                          </a>
