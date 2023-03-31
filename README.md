@@ -16,12 +16,20 @@ Pour ce qui est de l’administration, je souhaite une page de connexion. Lorsqu
 - Langage : libre et soumis au vote des équipes, utilisation d’un framework pour le back
 - Équipes : imposées (le groupe se sépare en deux équipes, une qui commencera par travailler sur le front-end et l’autre sur le back-end, puis les deux équipes inverseront à la fin de la première semaine)
 
-### Visuels
+### Visuels web
 
-![retrovibes home](https://user-images.githubusercontent.com/115166022/228195060-9a349119-f23e-4e03-83b5-ff14e73551c5.png)
-![retrovibe panier vide](https://user-images.githubusercontent.com/115166022/228195062-0450975a-17a6-4292-8209-5025b88845ce.png)
-![retrovibe produit](https://user-images.githubusercontent.com/115166022/228195070-27add87f-481b-4b31-86ee-576b70dcdcbb.png)
-![retrovibe panier plein](https://user-images.githubusercontent.com/115166022/228195073-4b4fa1c9-4ccd-4df4-ab6d-5e35b2941059.png)
+![retrovibes connexion](https://user-images.githubusercontent.com/115166022/229142361-d5cb85ea-6f1a-4219-8404-d70971f6743e.png)
+![retrovibe panier plein](https://user-images.githubusercontent.com/115166022/229142369-bd28a236-ece2-41de-9ffd-4981347b8518.png)
+![retrovibe produit](https://user-images.githubusercontent.com/115166022/229142374-7b6afcc9-9b53-496c-8755-9c0e0c6fa950.png)
+![retrovibe panier vide](https://user-images.githubusercontent.com/115166022/229142381-d3c25eb7-608b-4472-8334-ef5e40659bb7.png)
+![retrovibes home](https://user-images.githubusercontent.com/115166022/229142385-e9b7c975-1aab-401b-b35e-f6ce1389f7de.png)
+
+
+### Visuels mobile!
+[mobile retrovibes panier](https://user-images.githubusercontent.com/115166022/229143611-e41ddcce-2456-4087-986a-272658267db3.png)
+![mobile retrovibes home](https://user-images.githubusercontent.com/115166022/229143552-6fe7cca2-e01f-426b-bfef-5de9ad226fa5.png)
+![mobile retrovibes connexion](https://user-images.githubusercontent.com/115166022/229143586-0d4f7770-a857-4250-a900-fbbae1e09971.png)
+![mobile retrovibes product](https://user-images.githubusercontent.com/115166022/229143590-77cc1e28-38bd-44a7-a09d-7625dc2152d4.png)
 
 
 ### Maquette
