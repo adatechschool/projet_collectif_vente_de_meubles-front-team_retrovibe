@@ -1,5 +1,4 @@
 import React from 'react';
-import ConnectedClient from "../Pages/ConnectedClient";
 import ConnectedAdmin from "../Pages/ConnectedAdmin";
 import Log from "../Pages/Log";
 
@@ -13,19 +12,13 @@ function SendtoRightPage() {
                 <ConnectedAdmin/>
             </div>
         )   
-    } else if (idValue == null) {
+    } else {
         return ( 
             <div>
                 <Log/>
             </div>
         )   
-    } else {
-        return (
-            <div>
-                <ConnectedClient/>
-            </div> 
-        )
-    }
+    } 
 }
 
 export default SendtoRightPage;

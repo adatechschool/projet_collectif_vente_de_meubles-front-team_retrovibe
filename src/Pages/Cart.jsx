@@ -45,22 +45,16 @@ function Cart() {
     return (
 
     <div className="flex flex-col items-center relative sm:flex-row sm:mx-60 sm:py-20">
-    {/* <div className="flex flex-row mx-60 py-20 relative"></div> */}
         <div className="w-3/4 flex flex-col items-center pb-6 sm:w-2/3 sm:sm:items-start sm:pb-0"> 
             <h2 className="text-sm py-6 text-candlelight-500 font-bold sm:py-0 sm:text-3xl sm:ml-4">{getArticleString(meubles)}</h2>
-            {/* <h2 className="text-3xl text-candlelight-500 font-bold ml-24">{getArticleString(meubles)}</h2> */}
             {meubles.length >= 1 && <div className="pb-6 sm:pb-0 sm:mt-2 sm:ml-4"><ClearCartButton /></div>}
-        {/* <div class="mt-2 ml-24"><ClearCartButton /></div> */}
             
-
             {meubles.map((meuble, index) => (
             <div className="w-full flex flex-col sm:w-3/4 sm:p-4" key={meuble.id} id={meuble.id}>
-            {/* <div className="w-3/4 flex flex-col p-4" key={meuble.id} id={meuble.id}> */}
                 <h2 className="text-xl text-violet-400 font-bold sm:mb-4 sm:ml-2">Article n°{index + 1}</h2>
                 <div className="flex items-center bg-white p-2 border-2 border-candlelight-500 rounded-md mb-4 shadow-lg sm:h-48 justify-between">
                     <div className="flex flex-row justify-evenly items-center">
                         <div className="w-1/4 mr-1 rounded-lg overflow-hidden shadow-md hover:scale-110 transition duration-700 ease-in-out sm:w-1/5">
-                        {/* <div className="w-1/5 h-4/6 rounded-lg overflow-hidden shadow-md hover:scale-110 transition duration-700 ease-in-out"> */}
                          <a href={`/product/${meuble.id}`}>
                             <img className="rounded-lg shadow-md" src={meuble.photo_1} alt="visuel principal de l'article"></img>
                          </a>
