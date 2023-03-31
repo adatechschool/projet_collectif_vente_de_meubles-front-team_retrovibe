@@ -35,7 +35,7 @@ function ClearCartButtonByOne(props) {
     }
         return (
             <button onClick={clearStorageByOne} alt="bouton du caddie">
-                <img src={Croix} alt="supprimer" className='w-10 h-10 p-3 bg-violet-400  hover:bg-violet-700 focus:outline-none hover:scale-110 transition duration-700 ease-in-out rounded-full border' />
+                <img src={Croix} alt="supprimer" className='w-10 h-10 p-3 bg-violet-400  hover:bg-violet-700 focus:outline-none hover:scale-110 transition-all duration-500 ease-in-out rounded-full border' />
             </button>
           );
         
