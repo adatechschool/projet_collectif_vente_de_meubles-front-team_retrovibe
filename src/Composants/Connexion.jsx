@@ -21,9 +21,10 @@ function Connexion (){
               console.log(response2.data)
               localStorage.setItem('Id_ConnectedUser',response2.data.id); // ajout de l'id de l'utilisateur connecter au localstorage 
               console.log(localStorage.getItem('Id_ConnectedUser'))
-              window.location.assign('http://retrovibes.herokuapp.com/connectedclient')
+              // window.location.assign('http://retrovibes.herokuapp.com/connectedclient')
               // j'appelle ici mon useNavigate() avec la route souhaitée plutôt que d'utiliser window.location.assign
-              navigate('/connectedclient')
+              navigate('/home')
+              window.location.reload(false)
             })
           break;
         } else {console.log("mail incorrect");}
@@ -32,18 +33,12 @@ function Connexion (){
 
     return (
     <div>
-      <form onSubmit={handleSubmit(onSubmit)} className = "md:mr-16 text-center">
-        <h1 className="mt-6 mb-6 text-center">Déjà client.e ?</h1>
-        <div className="mb-6 flex flex-row">
-          <div>
-            <div className="mb-6">
-              <input  defaultValue="" size="50"{...register("email")}type="email" id="email" className="bg-slate-100 border-2 border-violet-400 text-gray-900 text-sm rounded-lg focus:outline-none block p-2.5 pr-42 hover:border-violet-700" placeholder="email" required />
-            </div>
-            <div className="mb-6">
-              <input defaultValue="" size="50" {...register("mot_de_passe")}type="password" id="password" className="bg-slate-100 border-2 border-violet-400 text-gray-900 text-sm rounded-lg focus:outline-none block p-2.5  pr-42 hover:border-violet-700" placeholder="mot de passe" required />
-            </div>
-            <button type ="submit"className="mb-6 text-white bg-violet-400 hover:bg-violet-700 focus:outline-none font-medium rounded-lg text-sm sm:w-auto px-5 py-2.5 text-center">Me connecter</button>
-          </div>  
+      <form onSubmit={handleSubmit(onSubmit)} className = "">
+        <h1 className="text-center mb-8">Déjà client.e ?</h1>
+        <div className="flex flex-col justify-center text-sm  space-y-2">
+              <input  defaultValue="" size="50"{...register("email")}type="email" id="email" className="focus:outline-none p-3 bg-slate-100 border-2 border-violet-400 text-gray-900 rounded-lg hover:border-violet-700" placeholder="email" required />
+              <input defaultValue="" size="50" {...register("mot_de_passe")}type="password" id="password" className="bg-slate-100 focus:outline-none border-2 p-3 border-violet-400 text-gray-900 rounded-lg hover:border-violet-700" placeholder="mot de passe" required />
+            <button type ="submit"className="self-center focus:outline-none w-1/2 text-white bg-violet-400 hover:bg-violet-700 font-medium rounded-lg sm:w-auto px-5 py-2.5 text-center">Me connecter</button>
         </div>
       </form>
     </div>

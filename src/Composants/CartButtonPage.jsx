@@ -6,7 +6,7 @@ import { faBasketShopping } from "@fortawesome/free-solid-svg-icons";
 function CartButtonPage() {
     return(
         <a href="/cart" >
-        <button class=" mb-6 text-white bg-violet-400 transition-all duration-1000 hover:bg-violet-700 focus:outline-none font-medium rounded-lg text-sm sm:w-auto m-auto px-5 py-2.5 text-center my-2 " alt="bouton du caddie">
+        <button className="sm:h-12 sm:w-12 sm:m-2 w-7 h-7 m-1 bg-violet-400 transition-all duration-500 hover:bg-violet-700 rounded-lg focus:outline-none hover:scale-110 ease-in-out" alt="bouton du caddie">
         <FontAwesomeIcon icon={faBasketShopping} style={{color: "#FFD91A",}} />
         </button>
         </a>

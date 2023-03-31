@@ -23,18 +23,17 @@ const handleSearchTerm = (e) => {
   ;
 
     return (
-      <div className="relative">
+      <div className="w-full">
           <div>
-            <form  className='pl-2.5 py-1 items-center flex flex-row mb-1 border-2 border-violet-400 transition-all duration-1000 hover:border-violet-700 focus:outline-none rounded-full px-1 '>
+            <form className='px-2 py-1 border-2 border-violet-400 transition-all duration-1000 hover:border-violet-700 focus:outline-none rounded-full '>
                 <input 
                 type = "search"
                 placeholder= "Rechercher..."
                 onChange={handleSearchTerm}
-                className = "focus:outline-none px-4 mr-20" >
+                className = "w-full focus:outline-none" >
                 </input>
             </form>
-          </div>
-         <div className="absolute top-10 left-0 flex">
+         <div className="w-full absolute top-10 flex flex-col" >
               {
               meubles 
                 .filter((val) => {
@@ -45,13 +44,14 @@ const handleSearchTerm = (e) => {
                   return (
                       <div key={val.id}>
                           <a href={`/product/${val.id}`}>
-                          <p className="ml-1 mb-2 text-white bg-violet-400 transition-all duration-1000 hover:bg-violet-700 focus:outline-none font-medium rounded-lg text-sm sm:w-auto px-2 py-1.5 text-center">{val.nom}</p>
+                          <p className="w-full py-1.5 pl-1.5 my-0.5 text-white bg-violet-400 transition-all duration-1000 hover:bg-violet-700 font-medium rounded-lg text-sm text-left">{val.nom}</p>
                           </a>
                       </div>
                   );}
               })}
           </div> 
       </div>
+    </div>
 )}
 
 export default Searchbar;
