@@ -25,13 +25,6 @@ Pour ce qui est de l’administration, je souhaite une page de connexion. Lorsqu
 ![retrovibes home](https://user-images.githubusercontent.com/115166022/229142385-e9b7c975-1aab-401b-b35e-f6ce1389f7de.png)
 
 
-### Visuels mobile!
-[mobile retrovibes panier](https://user-images.githubusercontent.com/115166022/229143611-e41ddcce-2456-4087-986a-272658267db3.png)
-![mobile retrovibes home](https://user-images.githubusercontent.com/115166022/229143552-6fe7cca2-e01f-426b-bfef-5de9ad226fa5.png)
-![mobile retrovibes connexion](https://user-images.githubusercontent.com/115166022/229143586-0d4f7770-a857-4250-a900-fbbae1e09971.png)
-![mobile retrovibes product](https://user-images.githubusercontent.com/115166022/229143590-77cc1e28-38bd-44a7-a09d-7625dc2152d4.png)
-
-
 ### Maquette
 
 ![ACCUEIL](https://user-images.githubusercontent.com/115166022/228195190-b53e3076-8f89-4526-b3bf-29b12c6d8068.png)
