@@ -6,11 +6,11 @@ import LogOutButton from "../Composants/LogOutButton"
 function connectedClient(){
     axios.get("https:retrovibe.herokuapp.com/api/utilisateurs")
         .then(function(response) {
-            console.log(response.data);
+            // console.log('response', response.data);
             for (let i = 0; i < response.data.length; i++){
                 if (localStorage.getItem('Id_ConnectedUser') === response.data[i].id) {
                     let salut = "Compte de " + response.data[i].prenom + " " + response.data[i].nom; // on récupère le nom et prenom de l'utilisateur clien connecter
-                    console.log(salut);
+                    console.log('salut', salut);
                     break;
                 }
             }
