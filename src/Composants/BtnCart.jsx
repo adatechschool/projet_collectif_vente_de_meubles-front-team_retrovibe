@@ -17,12 +17,14 @@ l'article dans le stockage local en utilisant JSON.stringify pour convertir l'ob
 function BtnCart(props) {
       const handleClick = () => {
       // Récupérer les éléments du panier (un tableau avec l'ID de l'article) depuis le local storage 
+      // c'est une string que je convertis en objet avec JSON.parse
       const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
-  
-      // Ajouter le nouvel élément à la liste
+      // Ajouter le nouvel élément à la liste (je push mes objets dans un array)
       cartItems.push(props.meubleId);
+
   
-      // Stocker la nouvelle liste dans le local storage
+      // Stocker la nouvelle liste dans le local storage (je le retransforme en string avec JSON.stringify
+      // pour pouvoir le renvoyer au serveur localStorage)
       localStorage.setItem('cart', JSON.stringify(cartItems));
 
       // Afficher la liste des éléments du panier dans la console

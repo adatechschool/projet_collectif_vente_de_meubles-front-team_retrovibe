@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import { useForm } from "react-hook-form";
+import { toast } from 'react-toastify';
 
 
 function Inscription (){
@@ -12,9 +13,30 @@ function Inscription (){
         mot_de_passe: data.InputMotdePasse  // Envoie d'une méthode post pour ajouter un utilisateur à la BDD pour s'inscrire 
     })
     .then(function (response){
+
+      toast.success('Vôtre compte a bien été créé ! ✌', {
+        position: "top-center",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        });
       console.log(response);
     })
     .catch(function (error) {
+      toast.error("La création du compte a echouée. 😓", {
+        position: "top-center",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        });
       console.log(error);
     });
 

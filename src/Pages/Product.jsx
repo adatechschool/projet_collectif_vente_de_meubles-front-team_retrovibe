@@ -25,8 +25,7 @@ function Product() {
            console.log(error);
          });
      }, [id]);
-
-   
+     
     //  console.log('nom', meuble.length)
 
     return (
