@@ -11,7 +11,6 @@ function Article() {
    /* utilise le hook d'effet "useEffect" pour exécuter une action lorsqu'un certain événement se produit 
    (dans ce cas, lorsque le composant est monté).*/
      useEffect(() => {
-   
    /* J'effectue une requête HTTP GET à l'URL spécifiée et récupère les données renvoyées. Si la requête est réussie, 
    les données renvoyées sont utilisées pour mettre à jour la variable d'état "meubles" à l'aide de la fonction "setMeubles". 
    Si la requête échoue, une erreur est affichée dans la console.*/
@@ -21,8 +20,8 @@ function Article() {
          })
          .catch(error => {
            console.log(error);
-         });
-     }, []);
+          });
+        }, []);
    
      /* syntaxe si je veux recup dans une variable une info précise, ici le nom de l'article.
       const nom = meubles.map(meuble => meuble.nom);*/

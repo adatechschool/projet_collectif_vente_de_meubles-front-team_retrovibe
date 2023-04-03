@@ -1,5 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import { toast } from 'react-toastify';
 
 
 function LogOutButton() {
@@ -11,10 +12,24 @@ function LogOutButton() {
         // Récupérer les éléments du panier (un tableau avec l'ID de l'article) depuis le local storage 
         const IdStored = JSON.parse(localStorage.getItem('Id_ConnectedUser')) || [];
 
-        // Stocker la nouvelle liste dans le local storage
+        // supprimer l'id dans le local storage
         localStorage.removeItem('Id_ConnectedUser');
+
+        toast.info('Vous êtes bien déconnecté. 👋', {
+            position: "top-center",
+            autoClose: 2000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+            });
+            
         navigate('/home')
-        window.location.reload(false)
+        // window.location.reload(false)
+
+        
 
     }
         return (

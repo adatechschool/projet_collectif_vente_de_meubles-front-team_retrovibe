@@ -5,31 +5,51 @@ import { useForm } from "react-hook-form";
 import axios from 'axios';
 // import du useNavigate qui permet d'aller vers la bonne route quel que soit le serveur (localhost ou heroku)
 import { useNavigate } from "react-router-dom";
+import { toast } from 'react-toastify';
 
 function Connexion (){
-    // j'utilise le hook useNavigate pour changer de page au oneSubmit
-    const navigate = useNavigate();
+  const navigate = useNavigate();
+  const { register, handleSubmit, formState: { error } } = useForm();
 
-    const { register, handleSubmit, watch, formState: { error } } = useForm();
-    const onSubmit = data => axios.get("https://retrovibe.herokuapp.com/api/utilisateurs")
-    .then(function (response){
-      console.log(response.data)
-      for (let i=0; i<response.data.length; i++){
-        if (response.data[i].email === data.email){
-          axios.get(`https://retrovibe.herokuapp.com/api/utilisateurs/${response.data[i].id}?email=${data.email}&mot_de_passe=${data.mot_de_passe}`) // methode Get One pour verifier le mail et le mot de passe
-            .then(function (response2){
-              console.log(response2.data)
-              localStorage.setItem('Id_ConnectedUser',response2.data.id); // ajout de l'id de l'utilisateur connecter au localstorage 
-              console.log(localStorage.getItem('Id_ConnectedUser'))
-              // window.location.assign('http://retrovibes.herokuapp.com/connectedclient')
-              // j'appelle ici mon useNavigate() avec la route souhaitée plutôt que d'utiliser window.location.assign
-              navigate('/home')
-              window.location.reload(false)
-            })
+  const onSubmit = data => axios.get("https://retrovibe.herokuapp.com/api/utilisateurs")
+  .then(function (response){
+    console.log(response.data);
+    let emailMatch = false;
+
+    for (let i=0; i<response.data.length; i++){
+      if (response.data[i].email === data.email){
+        emailMatch = true;
+        axios.get(`https://retrovibe.herokuapp.com/api/utilisateurs/${response.data[i].id}?email=${data.email}&mot_de_passe=${data.mot_de_passe}`)
+          .then(function (response2){
+            localStorage.setItem('Id_ConnectedUser',response2.data.id);
+            navigate('/home');
+            toast.success('Vous êtes connecté ! 😃', {
+              position: "top-center",
+              autoClose: 2000,
+              hideProgressBar: false,
+              closeOnClick: true,
+              pauseOnHover: true,
+              draggable: true,
+              progress: undefined,
+              theme: "light",
+            });
+          })
           break;
-        } else {console.log("mail incorrect");}
       }
-    })
+    }
+    if (!emailMatch) {
+      toast.error('Adresse e-mail incorrecte !', {
+        position: "top-center",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
+    }
+  })
 
     return (
     <div>
