@@ -2,6 +2,12 @@
 
 Ceci est le repo de notre Front, le Back se trouve [ici](https://github.com/adatechschool/projet_collectif_vente_de_meubles_back-team_retrovibe)
 
+### Mon rôle dans ce porjet collectif
+
+- Dans un premier temps, je me suis occupé de la page "panier", à la fois visuellement et en terme de fonctionnalités : possibilté d'alimenter un panier, de le modifier, calcul du total, etc...
+- Dans un second temps, j'ai rendu le site entièrement responsive. (en collaboration avec Nolwen.)
+
+
 ### Contexte
 
 Projet de **Jeremy Zynger, Pierre Merlaud, Isabelle Yi, Léon Yi, Helder Ferreira, Sandy Dambreville, Johan Anquetil** et **Nolwen Major Francès** dans le cadre de notre formation à **ADA Tech School**.
